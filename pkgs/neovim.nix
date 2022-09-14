@@ -90,6 +90,7 @@
       # LSP
       lspkind-nvim
       lua-dev-nvim
+      null-ls-nvim
       nvim-lspconfig
       # Syntax highlighting
       nvim-treesitter'
