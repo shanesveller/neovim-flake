@@ -133,6 +133,14 @@ wk.register({
 				"Save and source",
 			},
 		},
+		l = {
+			name = "LSP",
+			i = { "<cmd>LspInfo<CR>", "Info" },
+			L = { "<cmd>LspLog<CR>", "Log" },
+			R = { "<cmd>LspRestart<CR>", "Restart" },
+			s = { "<cmd>LspStart<CR>", "Start" },
+			S = { "<cmd>LspStop<CR>", "Stop" },
+		},
 		p = {
 			name = "Projects",
 			f = { "<cmd>Telescope git_files<CR>", "Find project files" },
@@ -163,6 +171,14 @@ wk.register({
 		},
 	},
 })
+
+---- }}}
+
+---- LSP {{{
+
+local lspconfig = require("lspconfig")
+local luadev = require("lua-dev").setup({})
+lspconfig.sumneko_lua.setup(luadev)
 
 ---- }}}
 

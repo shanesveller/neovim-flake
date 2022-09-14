@@ -80,6 +80,9 @@
       telescope-project-nvim
       # Keybinds
       which-key-nvim
+      # LSP
+      lua-dev-nvim
+      nvim-lspconfig
       # Syntax highlighting
       nvim-treesitter'
     ];
