@@ -11,6 +11,7 @@
   writeTextFile,
   stylua,
   sumneko-lua-language-server,
+  tree-sitter-eex,
 }: let
   config = neovimUtils.makeNeovimConfig {
     extraLuaPackages = luaPackages: [];
@@ -35,6 +36,7 @@
           tree-sitter-css
           tree-sitter-dockerfile
           tree-sitter-dot
+          tree-sitter-eex
           tree-sitter-elisp
           tree-sitter-elixir
           tree-sitter-embedded-template

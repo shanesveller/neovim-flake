@@ -46,7 +46,10 @@
           inherit (inputs'.neovim.packages) neovim;
         in {
           inherit neovim;
-          neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {neovim-unwrapped = neovim;};
+          neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
+            neovim-unwrapped = neovim;
+            inherit (config.packages) tree-sitter-eex;
+          };
 
           tree-sitter-eex =
             pkgs.callPackage
