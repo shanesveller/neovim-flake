@@ -72,6 +72,13 @@
       # Appearance
       lualine-nvim
       nvim-base16
+      # Completion
+      cmp-buffer
+      cmp-cmdline
+      cmp-git
+      cmp-nvim-lua
+      cmp-path
+      nvim-cmp
       # Editing
       direnv-vim
       # Finder
@@ -81,6 +88,7 @@
       # Keybinds
       which-key-nvim
       # LSP
+      lspkind-nvim
       lua-dev-nvim
       nvim-lspconfig
       # Syntax highlighting
