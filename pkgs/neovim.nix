@@ -69,6 +69,8 @@
     in [
       # Ad-hoc package management
       packer-nvim
+      # Appearance
+      nvim-base16
       # Editing
       direnv-vim
       # Syntax highlighting
