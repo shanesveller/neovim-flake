@@ -9,6 +9,7 @@
   vimUtils,
   wrapNeovimUnstable,
   writeTextFile,
+  alejandra,
   stylua,
   sumneko-lua-language-server,
   tree-sitter-eex,
@@ -105,6 +106,6 @@ in
           "--suffix"
           "PATH"
           ":"
-          (lib.makeBinPath [stylua sumneko-lua-language-server])
+          (lib.makeBinPath [alejandra stylua sumneko-lua-language-server])
         ];
     })

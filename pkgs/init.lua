@@ -1,5 +1,6 @@
 -- vim: foldmethod=marker
 
+local api = vim.api
 local g = vim.g
 local o = vim.opt
 
@@ -213,7 +214,32 @@ local lspconfig = require("lspconfig")
 local luadev = require("lua-dev").setup({})
 lspconfig.sumneko_lua.setup(luadev)
 
-require("null-ls").setup({})
+local augroup = api.nvim_create_augroup("LspFormatting", {})
+local null_ls = require("null-ls")
+null_ls.setup({
+	sources = {
+		-- Lua
+		null_ls.builtins.formatting.stylua,
+		-- Nix
+		null_ls.builtins.formatting.alejandra,
+	},
+
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				callback = function()
+					-- Neovim 0.8+
+					vim.lsp.buf.format({ bufnr = bufnr })
+					-- Neovim 0.7
+					-- vim.lsp.buf.formatting_seq_sync()
+				end,
+			})
+		end
+	end,
+})
 
 ---- }}}
 
