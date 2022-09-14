@@ -111,15 +111,19 @@ wk.setup({})
 
 wk.register({
 	["<leader>"] = {
+		["'"] = { "<cmd>Telescope resume<CR>", "Resume last search" },
 		b = {
 			name = "Buffers",
 			b = { "<cmd>buffers<CR>", "List" },
+			B = { "<cmd>Telescope buffers<CR>", "List" },
 			d = { "<cmd>bd<CR>", "Delete" },
 			D = { "<cmd>%bd<CR>", "Delete All" },
 			r = { "<cmd>edit<CR>", "Revert" },
 		},
 		f = {
-			name = "Files",
+			name = "Find/Files",
+			["."] = { "<cmd>Telescope find_files cwd=%:h<CR>", "Find files" },
+			f = { "<cmd>Telescope find_files<CR>", "Find files" },
 			s = { "<cmd>write<CR>", "Save" },
 			x = {
 				function()
@@ -128,6 +132,22 @@ wk.register({
 				end,
 				"Save and source",
 			},
+		},
+		p = {
+			name = "Projects",
+			f = { "<cmd>Telescope git_files<CR>", "Find project files" },
+			p = { "<cmd>Telescope project<CR>", "Find project" },
+		},
+		s = {
+			name = "Search",
+			d = { "<cmd>Telescope live_grep cwd=%:h<CR>", "Search current directory" },
+			p = { "<cmd>Telescope live_grep<CR>", "Search project" },
+		},
+		t = {
+			name = "Telescope",
+			g = { "<cmd>Telescope git_status<CR>", "Git Status" },
+			h = { "<cmd>Telescope help_tags<CR>", "Help Tags" },
+			t = { "<cmd>Telescope<CR>", "Telescope" },
 		},
 		w = {
 			name = "Windows",
