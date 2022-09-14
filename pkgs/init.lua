@@ -2,6 +2,15 @@
 
 local o = vim.opt
 
+---- Appearance {{{
+
+-- Use single statusbar per window
+o.laststatus = 3
+
+vim.cmd.colorscheme("base16-tomorrow-night")
+
+---- }}}
+
 ---- Editing {{{
 
 -- Indentation
