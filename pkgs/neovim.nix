@@ -74,6 +74,8 @@
       nvim-base16
       # Editing
       direnv-vim
+      # Keybinds
+      which-key-nvim
       # Syntax highlighting
       nvim-treesitter'
     ];

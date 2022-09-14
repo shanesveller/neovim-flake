@@ -33,6 +33,13 @@ g.loaded_ruby_provider = 0
 
 ---- }}}
 
+---- Early-stage keybinds {{{
+
+g.mapleader = " "
+g.maplocalleader = " "
+
+---- }}}
+
 ---- Appearance {{{
 
 -- Line numbering
@@ -63,6 +70,17 @@ o.tabstop = 2
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+---- }}}
+
+---- Keybinds {{{
+
+local wk = require("which-key")
+wk.setup({})
+
+wk.register({
+	["<leader>"] = {},
+})
 
 ---- }}}
 
