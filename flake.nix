@@ -3,6 +3,8 @@
 
   inputs = {
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    neovim.url = "github:neovim/neovim?dir=contrib";
+    neovim.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
