@@ -23,7 +23,11 @@
         pkgs,
         system,
         ...
-      }: {};
+      }: {
+        packages = {
+          inherit (inputs'.neovim.packages) neovim;
+        };
+      };
       flake = {};
     };
 }
