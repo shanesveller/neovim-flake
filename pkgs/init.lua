@@ -13,6 +13,12 @@ o.laststatus = 3
 
 vim.cmd.colorscheme("base16-tomorrow-night")
 
+require("lualine").setup({
+	options = {
+		theme = "base16",
+	},
+})
+
 ---- }}}
 
 ---- Editing {{{

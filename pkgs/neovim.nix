@@ -70,6 +70,7 @@
       # Ad-hoc package management
       packer-nvim
       # Appearance
+      lualine-nvim
       nvim-base16
       # Editing
       direnv-vim
