@@ -42,8 +42,11 @@
           packages = (with pkgs; [just nix-tree]) ++ (with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua]);
           inherit (config.checks.pre-commit-check) shellHook;
         };
-        packages = {
+        packages = let
           inherit (inputs'.neovim.packages) neovim;
+        in {
+          inherit neovim;
+          neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {neovim-unwrapped = neovim;};
 
           tree-sitter-eex =
             pkgs.callPackage
