@@ -8,7 +8,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     flake-parts,
     ...
@@ -26,6 +26,19 @@
       }: {
         packages = {
           inherit (inputs'.neovim.packages) neovim;
+
+          tree-sitter-eex =
+            pkgs.callPackage
+            (inputs.nixpkgs + /pkgs/development/tools/parsing/tree-sitter/grammar.nix) {} {
+              language = "eex";
+              version = "0.1.0";
+              source = pkgs.fetchFromGitHub {
+                owner = "connorlay";
+                repo = "tree-sitter-eex";
+                rev = "v0.1.0";
+                sha256 = "sha256-UPq62MkfGFh9m/UskoB9uBDIYOcotITCJXDyrbg/wKY=";
+              };
+            };
         };
       };
       flake = {};
