@@ -138,6 +138,12 @@ tel.setup({
 
 ---- }}}
 
+---- Git {{{
+
+require("gitsigns").setup({})
+
+---- }}}
+
 ---- Keybinds {{{
 
 local wk = require("which-key")
@@ -166,6 +172,14 @@ wk.register({
 				end,
 				"Save and source",
 			},
+		},
+		g = {
+			name = "Git",
+			["["] = { "<cmd>Gitsigns prev_hunk<CR>", "Previous hunk" },
+			["]"] = { "<cmd>Gitsigns next_hunk<CR>", "Previous hunk" },
+			b = { "<cmd>Gitsigns blame_line<CR>", "Blame current line" },
+			s = { "<cmd>Gitsigns stage_hunk<CR>", "Stage hunk" },
+			S = { "<cmd>Gitsigns stage_buffer<CR>", "Stage file" },
 		},
 		l = {
 			name = "LSP",
@@ -218,6 +232,8 @@ local augroup = api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
+		-- Git
+		null_ls.builtins.code_actions.gitsigns,
 		-- Lua
 		null_ls.builtins.formatting.stylua,
 		-- Nix

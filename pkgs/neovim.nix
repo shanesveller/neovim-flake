@@ -86,6 +86,8 @@
       telescope-nvim
       telescope-fzf-native-nvim
       telescope-project-nvim
+      # Git
+      gitsigns-nvim
       # Keybinds
       which-key-nvim
       # LSP
