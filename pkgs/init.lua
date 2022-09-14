@@ -73,6 +73,37 @@ vim.o.smartcase = true
 
 ---- }}}
 
+---- Finder {{{
+
+local tel = require("telescope")
+
+tel.load_extension("fzf")
+tel.load_extension("project")
+
+tel.setup({
+	defaults = {
+		path_display = { shorten = 3 },
+		preview = { hide_on_startup = true },
+	},
+	extensions = {
+		fzf = {
+			fuzzy = true,
+			override_generic_sorter = true,
+			override_file_sorter = true,
+			case_mode = "smart_case",
+		},
+		project = {
+			base_dirs = {
+				"~/.dotfiles",
+				"~/src",
+			},
+			theme = "dropdown",
+		},
+	},
+})
+
+---- }}}
+
 ---- Keybinds {{{
 
 local wk = require("which-key")

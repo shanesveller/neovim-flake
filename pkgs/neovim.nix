@@ -74,6 +74,10 @@
       nvim-base16
       # Editing
       direnv-vim
+      # Finder
+      telescope-nvim
+      telescope-fzf-native-nvim
+      telescope-project-nvim
       # Keybinds
       which-key-nvim
       # Syntax highlighting
