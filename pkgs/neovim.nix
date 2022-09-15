@@ -9,16 +9,30 @@
   vimUtils,
   wrapNeovimUnstable,
   writeTextFile,
-  # Formatters/Linters/LSP
+  # Formatters and Linters
   alejandra,
-  elixir_ls,
   stylua,
+  # LSP Servers
+  elixir_ls,
   sumneko-lua-language-server,
   # Plugins
   elixir-nvim,
   pretty-fold-nvim,
   tree-sitter-eex,
 }: let
+  my-paths = writeTextFile {
+    name = "paths-lua";
+    destination = "/lua/user/paths.lua";
+    text = ''
+      return {
+        elixir_ls = "${lib.getExe elixir_ls}",
+        sumneko = "${lib.getExe sumneko-lua-language-server}",
+      }
+    '';
+    checkPhase = ''
+      ${lib.getExe stylua} "$target"
+    '';
+  };
   config = neovimUtils.makeNeovimConfig {
     extraLuaPackages = luaPackages: [];
     extraPython3Packages = pythonPackages: [];
@@ -105,6 +119,7 @@
       # Keybinds
       which-key-nvim
       # LSP
+      my-paths
       lspkind-nvim
       lua-dev-nvim
       null-ls-nvim
