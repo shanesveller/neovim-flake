@@ -48,7 +48,11 @@
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
-            inherit (config.packages) tree-sitter-eex;
+            inherit (config.packages) pretty-fold-nvim tree-sitter-eex;
+          };
+
+          pretty-fold-nvim = pkgs.callPackage ./pkgs/pretty-fold-nvim.nix {
+            inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
           };
 
           tree-sitter-eex =

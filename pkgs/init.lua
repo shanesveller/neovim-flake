@@ -105,6 +105,12 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldlevel = 20
 o.foldmethod = "expr"
 
+require("pretty-fold").setup({
+	global = {},
+	marker = { process_comment_signs = "spaces" },
+	expr = { process_comment_signs = false },
+})
+
 local group = api.nvim_create_augroup("OpenFolds", { clear = true })
 api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
 	group = group,

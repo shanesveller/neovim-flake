@@ -12,6 +12,8 @@
   alejandra,
   stylua,
   sumneko-lua-language-server,
+  # Plugins
+  pretty-fold-nvim,
   tree-sitter-eex,
 }: let
   config = neovimUtils.makeNeovimConfig {
@@ -83,6 +85,7 @@
       # Editing
       comment-nvim
       direnv-vim
+      pretty-fold-nvim
       # Finder
       telescope-nvim
       telescope-fzf-native-nvim
