@@ -4,6 +4,10 @@ local o = vim.opt
 
 ---- Appearance {{{
 
+-- Line numbering
+o.number = true
+o.relativenumber = true
+
 -- Use single statusbar per window
 o.laststatus = 3
 
