@@ -39,7 +39,7 @@
           settings = {statix.ignore = [".direnv/*"];};
         };
         devShells.default = pkgs.mkShell {
-          packages = with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua];
+          packages = (with pkgs; [just nix-tree]) ++ (with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua]);
           inherit (config.checks.pre-commit-check) shellHook;
         };
         packages = {
