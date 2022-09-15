@@ -95,6 +95,15 @@ require("cmp").setup({
 
 ---- Editing {{{
 
+-- Folding {{{
+
+-- Fold using tree-sitter grammar
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldlevel = 20
+o.foldmethod = "expr"
+
+-- }}}
+
 -- Indentation
 o.shiftwidth = 2
 o.smartindent = true
