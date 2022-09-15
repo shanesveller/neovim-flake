@@ -90,6 +90,9 @@
       telescope-nvim
       telescope-fzf-native-nvim
       telescope-project-nvim
+      # File tree
+      nvim-tree-lua
+      nvim-web-devicons
       # Git
       fugitive
       gitsigns-nvim
