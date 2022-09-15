@@ -403,6 +403,14 @@ api.nvim_create_autocmd("BufDelete", {
 
 ---- Languages {{{
 
+-- Elixir {{{
+
+require("elixir").setup({
+	cmd = { g.my_paths.elixir_ls },
+})
+
+-- }}}
+
 -- Lua {{{
 
 local luadev = require("lua-dev").setup({})

@@ -50,10 +50,12 @@
               }
               // extra);
         in {
+          elixir-nvim = callVim ./pkgs/elixir-nvim.nix {};
+
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
-            inherit (config.packages) pretty-fold-nvim tree-sitter-eex;
+            inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex;
           };
 
           pretty-fold-nvim = callVim ./pkgs/pretty-fold-nvim.nix {};

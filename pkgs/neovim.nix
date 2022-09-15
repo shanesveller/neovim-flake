@@ -9,10 +9,13 @@
   vimUtils,
   wrapNeovimUnstable,
   writeTextFile,
+  # Formatters/Linters/LSP
   alejandra,
+  elixir_ls,
   stylua,
   sumneko-lua-language-server,
   # Plugins
+  elixir-nvim,
   pretty-fold-nvim,
   tree-sitter-eex,
 }: let
@@ -29,6 +32,9 @@
     withRuby = false;
 
     customRC = ''
+      lua << EOF
+        vim.g.my_paths = { elixir_ls = "${lib.getExe elixir_ls}", }
+      EOF
       luafile ${./init.lua}
     '';
 
@@ -107,6 +113,9 @@
       nvim-treesitter'
       # Workflow
       vim-projectionist
+      # Languages
+      ## Elixir
+      elixir-nvim
     ];
   };
 in
@@ -118,6 +127,6 @@ in
           "--suffix"
           "PATH"
           ":"
-          (lib.makeBinPath [alejandra stylua sumneko-lua-language-server])
+          (lib.makeBinPath [alejandra elixir_ls stylua sumneko-lua-language-server])
         ];
     })
