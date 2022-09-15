@@ -81,6 +81,7 @@
       cmp-path
       nvim-cmp
       # Editing
+      comment-nvim
       direnv-vim
       # Finder
       telescope-nvim

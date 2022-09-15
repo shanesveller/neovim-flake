@@ -95,6 +95,9 @@ require("cmp").setup({
 
 ---- Editing {{{
 
+-- Comments
+require("Comment").setup({})
+
 -- Folding {{{
 
 -- Fold using tree-sitter grammar
