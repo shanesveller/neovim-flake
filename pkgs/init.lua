@@ -98,6 +98,18 @@ wk.register({
 				"Save and source",
 			},
 		},
+		w = {
+			name = "Windows",
+			d = { "<cmd>close<CR>", "Close" },
+			h = { "<cmd>wincmd h<CR>", "Left" },
+			H = { "<cmd>wincmd H<CR>", "Left" },
+			j = { "<cmd>wincmd j<CR>", "Down" },
+			J = { "<cmd>wincmd J<CR>", "Down" },
+			k = { "<cmd>wincmd k<CR>", "Up" },
+			K = { "<cmd>wincmd K<CR>", "Up" },
+			l = { "<cmd>wincmd l<CR>", "Right" },
+			L = { "<cmd>wincmd L<CR>", "Right" },
+		},
 	},
 })
 
