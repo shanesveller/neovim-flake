@@ -10,6 +10,10 @@ o.smartindent = true
 o.softtabstop = 2
 o.tabstop = 2
 
+-- Search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
 ---- }}}
 
 ---- Syntax highlighting {{{
