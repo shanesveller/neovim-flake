@@ -64,7 +64,14 @@
           tree-sitter-vim
           tree-sitter-yaml
         ]);
-    in [nvim-treesitter' packer-nvim];
+    in [
+      # Ad-hoc package management
+      packer-nvim
+      # Editing
+      direnv-vim
+      # Syntax highlighting
+      nvim-treesitter'
+    ];
   };
 in
   wrapNeovimUnstable neovim-unwrapped (config
