@@ -102,6 +102,15 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldlevel = 20
 o.foldmethod = "expr"
 
+local group = api.nvim_create_augroup("OpenFolds", { clear = true })
+api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
+	group = group,
+	pattern = "*",
+	callback = function()
+		vim.cmd.normal("zR")
+	end,
+})
+
 -- }}}
 
 -- Indentation
