@@ -3,9 +3,14 @@
 
   inputs = {
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    flake-utils.url = "github:numtide/flake-utils";
     neovim.url = "github:neovim/neovim?dir=contrib";
+    neovim.inputs.flake-utils.follows = "flake-utils";
     neovim.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    pre-commit-hooks.inputs.flake-utils.follows = "flake-utils";
+    pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {
@@ -24,6 +29,19 @@
         system,
         ...
       }: {
+        checks.pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            alejandra.enable = true;
+            statix.enable = true;
+            stylua.enable = true;
+          };
+          settings = {statix.ignore = [".direnv/*"];};
+        };
+        devShells.default = pkgs.mkShell {
+          packages = with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua];
+          inherit (config.checks.pre-commit-check) shellHook;
+        };
         packages = {
           inherit (inputs'.neovim.packages) neovim;
 
