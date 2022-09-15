@@ -80,6 +80,13 @@ wk.setup({})
 
 wk.register({
 	["<leader>"] = {
+		b = {
+			name = "Buffers",
+			b = { "<cmd>buffers<CR>", "List" },
+			d = { "<cmd>bd<CR>", "Delete" },
+			D = { "<cmd>%bd<CR>", "Delete All" },
+			r = { "<cmd>edit<CR>", "Revert" },
+		},
 		f = {
 			name = "Files",
 			s = { "<cmd>write<CR>", "Save" },
