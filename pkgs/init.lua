@@ -1,5 +1,17 @@
 -- vim: foldmethod=marker
 
+local o = vim.opt
+
+---- Editing {{{
+
+-- Indentation
+o.shiftwidth = 2
+o.smartindent = true
+o.softtabstop = 2
+o.tabstop = 2
+
+---- }}}
+
 ---- Syntax highlighting {{{
 
 require("nvim-treesitter.configs").setup({
