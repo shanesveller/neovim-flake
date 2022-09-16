@@ -79,7 +79,19 @@ local wk = require("which-key")
 wk.setup({})
 
 wk.register({
-	["<leader>"] = {},
+	["<leader>"] = {
+		f = {
+			name = "Files",
+			s = { "<cmd>write<CR>", "Save" },
+			x = {
+				function()
+					vim.cmd.write()
+					vim.cmd.source("%")
+				end,
+				"Save and source",
+			},
+		},
+	},
 })
 
 ---- }}}
