@@ -136,8 +136,12 @@ vim.o.smartcase = true
 
 ---- File Tree {{{
 
-require("nvim-web-devicons").setup({})
-require("nvim-tree").setup({})
+local nvim_tree_lazy = function()
+	require("nvim-web-devicons").setup({})
+	require("nvim-tree").setup({})
+	vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim tree" })
+	vim.cmd("NvimTreeToggle")
+end
 
 ---- }}}
 
@@ -194,7 +198,7 @@ wk.register({
 			D = { "<cmd>%bd<CR>", "Delete All" },
 			r = { "<cmd>edit<CR>", "Revert" },
 		},
-		e = { "<cmd>NvimTreeToggle<CR>", "nvim-tree.lua" },
+		e = { nvim_tree_lazy, "nvim-tree.lua" },
 		f = {
 			name = "Find/Files",
 			["."] = { "<cmd>Telescope find_files cwd=%:h<CR>", "Find files" },
