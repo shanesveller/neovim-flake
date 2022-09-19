@@ -105,6 +105,8 @@
       nvim-lspconfig
       # Syntax highlighting
       nvim-treesitter'
+      # Workflow
+      vim-projectionist
     ];
   };
 in
