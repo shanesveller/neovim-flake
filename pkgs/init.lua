@@ -237,7 +237,7 @@ wk.register({
 		p = {
 			name = "Projects",
 			f = { "<cmd>Telescope git_files<CR>", "Find project files" },
-			p = { "<cmd>Telescope project<CR>", "Find project" },
+			p = { "<cmd>lua require('telescope').extensions.project.project({})<CR>", "Find project" },
 		},
 		s = {
 			name = "Search",
