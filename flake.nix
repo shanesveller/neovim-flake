@@ -44,6 +44,11 @@
         };
         packages = let
           inherit (inputs'.neovim.packages) neovim;
+          callVim = path: extra:
+            pkgs.callPackage path ({
+                inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
+              }
+              // extra);
         in {
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
@@ -51,9 +56,7 @@
             inherit (config.packages) pretty-fold-nvim tree-sitter-eex;
           };
 
-          pretty-fold-nvim = pkgs.callPackage ./pkgs/pretty-fold-nvim.nix {
-            inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
-          };
+          pretty-fold-nvim = callVim ./pkgs/pretty-fold-nvim.nix {};
 
           tree-sitter-eex =
             pkgs.callPackage
