@@ -273,6 +273,26 @@ local lspconfig = require("lspconfig")
 local luadev = require("lua-dev").setup({})
 lspconfig.sumneko_lua.setup(luadev)
 
+local on_attach_keymaps = function(_, bufnr)
+	wk.register({
+		g = {
+			d = { vim.lsp.buf.definition, "Definition" },
+			D = { vim.lsp.buf.declaration, "Declaration" },
+			i = { vim.lsp.buf.implementation, "Go to Implementation" },
+			l = { vim.diagnostic.open_float, "Open Diagnostic Float" },
+			r = { vim.lsp.buf.references, "Symbol References" },
+		},
+		K = { vim.lsp.buf.hover, "LSP Hover" },
+		["<C-k>"] = { vim.lsp.buf.signature_help, "Signature Help" },
+		["[d"] = { vim.diagnostic.goto_prev, "Go to Next Diagnostic" },
+		["]d"] = { vim.diagnostic.goto_next, "Go to Previous Diagnostic" },
+		["<leader>"] = {
+			ca = { vim.lsp.buf.code_action, "Code Action" },
+			rn = { vim.lsp.buf.rename, "Rename Symbol" },
+		},
+	}, { buffer = bufnr })
+end
+
 local augroup = api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -286,6 +306,8 @@ null_ls.setup({
 	},
 
 	on_attach = function(client, bufnr)
+		on_attach_keymaps(client, bufnr)
+
 		if client.supports_method("textDocument/formatting") then
 			api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			api.nvim_create_autocmd("BufWritePre", {
