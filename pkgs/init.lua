@@ -141,8 +141,8 @@ o.scrolloff = 8
 o.sidescrolloff = 8
 
 -- Search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+o.ignorecase = true
+o.smartcase = true
 
 ---- }}}
 
