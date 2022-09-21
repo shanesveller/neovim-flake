@@ -127,6 +127,7 @@ api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
 -- }}}
 
 -- Indentation
+o.expandtab = true
 o.shiftwidth = 2
 o.smartindent = true
 o.softtabstop = 2
