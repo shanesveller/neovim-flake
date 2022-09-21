@@ -132,6 +132,10 @@ o.smartindent = true
 o.softtabstop = 2
 o.tabstop = 2
 
+-- Scrolling
+o.scrolloff = 8
+o.sidescrolloff = 8
+
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
