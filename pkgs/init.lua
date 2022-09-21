@@ -99,6 +99,9 @@ require("cmp").setup({
 
 ---- Editing {{{
 
+-- Access system clipboard
+o.clipboard = "unnamedplus"
+
 -- Comments
 require("Comment").setup({})
 
