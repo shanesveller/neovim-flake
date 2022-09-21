@@ -353,6 +353,13 @@ require("nvim-treesitter.configs").setup({
 
 ---- }}}
 
+---- Windows and Tabs {{{
+
+o.splitbelow = true
+o.splitright = true
+
+---- }}}
+
 ---- Local {{{
 
 -- Time out disconnected, empty LSP clients
