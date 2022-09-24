@@ -208,7 +208,7 @@ wk.register({
 			B = { "<cmd>Telescope buffers<CR>", "List" },
 			d = { "<cmd>bd<CR>", "Delete" },
 			D = { "<cmd>%bd<CR>", "Delete All" },
-			r = { "<cmd>edit<CR>", "Revert" },
+			r = { "<cmd>edit!<CR>", "Revert" },
 		},
 		e = { nvim_tree_lazy, "nvim-tree.lua" },
 		f = {
