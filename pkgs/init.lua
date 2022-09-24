@@ -310,6 +310,8 @@ local on_attach_keymaps = function(_, bufnr)
 		["<leader>"] = {
 			ca = { vim.lsp.buf.code_action, "Code Action" },
 			rn = { vim.lsp.buf.rename, "Rename Symbol" },
+			lf = { "<cmd>Telescope lsp_document_symbols symbols=function<CR>", "LSP document functions" },
+			si = { "<cmd>Telescope lsp_document_symbols<CR>", "LSP document symbols" },
 		},
 	}, { buffer = bufnr })
 end
