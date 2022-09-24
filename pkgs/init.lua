@@ -291,8 +291,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 ---- LSP {{{
 
 local lspconfig = require("lspconfig")
-local luadev = require("lua-dev").setup({})
-lspconfig.sumneko_lua.setup(luadev)
 
 local on_attach_keymaps = function(_, bufnr)
 	wk.register({
@@ -394,5 +392,23 @@ api.nvim_create_autocmd("BufDelete", {
 		vim.defer_fn(delete_empty_lsp_clients, 5000)
 	end,
 })
+
+---- }}}
+
+---- Languages {{{
+
+-- Lua {{{
+
+local luadev = require("lua-dev").setup({})
+lspconfig.sumneko_lua.setup(luadev)
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = "lua",
+	callback = function()
+		vim.bo.expandtab = false
+	end,
+})
+
+-- }}}
 
 ---- }}}
