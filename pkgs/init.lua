@@ -246,6 +246,11 @@ wk.register({
 			s = { "<cmd>LspStart<CR>", "Start" },
 			S = { "<cmd>LspStop<CR>", "Stop" },
 		},
+		o = {
+			name = "Open",
+			d = { "<cmd>Telescope git_files cwd=~/.dotfiles show_untracked=true<CR>", "Dotfiles" },
+			v = { "<cmd>Telescope git_files cwd=~/src/neovim-flake show_untracked=true<CR>", "Neovim" },
+		},
 		p = {
 			name = "Projects",
 			f = { "<cmd>Telescope git_files show_untracked=true<CR>", "Find project files" },
