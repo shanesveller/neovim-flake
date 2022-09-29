@@ -202,6 +202,7 @@ wk.setup({})
 wk.register({
 	["<leader>"] = {
 		["'"] = { "<cmd>Telescope resume<CR>", "Resume last search" },
+		[","] = { "<cmd>Telescope buffers<CR>", "List buffers" },
 		b = {
 			name = "Buffers",
 			b = { "<cmd>buffers<CR>", "List" },
