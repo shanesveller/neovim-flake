@@ -261,6 +261,7 @@ wk.register({
 			name = "Search",
 			d = { "<cmd>Telescope live_grep cwd=%:h<CR>", "Search current directory" },
 			p = { "<cmd>Telescope live_grep<CR>", "Search project" },
+			s = { "<cmd>Telescope current_buffer_fuzzy_find<CR>", "Search current buffer" },
 		},
 		t = {
 			name = "Telescope",
