@@ -366,10 +366,12 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					-- Neovim 0.8+
-					vim.lsp.buf.format({ bufnr = bufnr })
-					-- Neovim 0.7
-					-- vim.lsp.buf.formatting_seq_sync()
+					vim.lsp.buf.format({
+						bufnr = bufnr,
+						filter = function(client)
+							return client.name ~= "rnix"
+						end,
+					})
 				end,
 			})
 		end
@@ -448,6 +450,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		vim.bo.expandtab = false
 	end,
 })
+
+-- }}}
+
+-- Nix {{{
+
+lspconfig.rnix.setup({})
 
 -- }}}
 
