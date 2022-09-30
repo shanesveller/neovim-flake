@@ -20,6 +20,7 @@
   pretty-fold-nvim,
   tree-sitter-eex,
   tree-sitter-just,
+  vim-just,
 }: let
   my-paths = writeTextFile {
     name = "paths-lua";
@@ -128,6 +129,7 @@
       nvim-lspconfig
       # Syntax highlighting
       nvim-treesitter'
+      vim-just
       # Workflow
       vim-projectionist
       # Languages

@@ -56,7 +56,7 @@
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
-            inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex tree-sitter-just;
+            inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex tree-sitter-just vim-just;
           };
 
           pretty-fold-nvim = callVim ./pkgs/pretty-fold-nvim.nix {};
@@ -86,6 +86,8 @@
                 sha256 = "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=";
               };
             };
+
+          vim-just = callVim ./pkgs/vim-just.nix {};
         };
       };
       flake = {};
