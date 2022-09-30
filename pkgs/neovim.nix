@@ -11,6 +11,7 @@
   writeTextFile,
   # Formatters and Linters
   alejandra,
+  statix,
   stylua,
   # LSP Servers
   elixir_ls,
@@ -146,6 +147,6 @@ in
           "--suffix"
           "PATH"
           ":"
-          (lib.makeBinPath [alejandra elixir_ls stylua sumneko-lua-language-server])
+          (lib.makeBinPath [alejandra elixir_ls statix stylua sumneko-lua-language-server])
         ];
     })
