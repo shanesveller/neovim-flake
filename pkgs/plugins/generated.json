@@ -1,0 +1,78 @@
+{
+    "elixir-nvim": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "elixir-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mhanberg",
+            "repo": "elixir.nvim",
+            "rev": "06614fa79ae2b914ded09e72f5574df1fc1024b4",
+            "sha256": "sha256-uWTvfMBKJs2DvknOqKaOYKHBgCZZ+mb93WrSfpZZ7Vs=",
+            "type": "github"
+        },
+        "version": "06614fa79ae2b914ded09e72f5574df1fc1024b4"
+    },
+    "other-nvim": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "other-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rgroli",
+            "repo": "other.nvim",
+            "rev": "a2ae9e03d08c6c5e8f60cc1db58cbf4ada2ae338",
+            "sha256": "sha256-knAHH4cxCxBTCZb54BERyR3l6+uhzZ3k9yPSzAl/4W0=",
+            "type": "github"
+        },
+        "version": "a2ae9e03d08c6c5e8f60cc1db58cbf4ada2ae338"
+    },
+    "pretty-fold-nvim": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "pretty-fold-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "anuvyklack",
+            "repo": "pretty-fold.nvim",
+            "rev": "a7d8b424abe0eedf50116c460fbe6dfd5783b1d5",
+            "sha256": "sha256-PQPZw0qXwMtpVE4uSxR3xUvkHE9iG4T+ZwgV6H9pUjo=",
+            "type": "github"
+        },
+        "version": "a7d8b424abe0eedf50116c460fbe6dfd5783b1d5"
+    },
+    "vim-just": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "vim-just",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NoahTheDuke",
+            "repo": "vim-just",
+            "rev": "312615d5b4c4aa2595d697faca5af345ba8fe102",
+            "sha256": "sha256-8qGFYRoVIiGB240wdM0o9hCMt65Gg4qIh7pvmW3DghU=",
+            "type": "github"
+        },
+        "version": "312615d5b4c4aa2595d697faca5af345ba8fe102"
+    }
+}

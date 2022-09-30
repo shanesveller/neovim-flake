@@ -1,0 +1,15 @@
+[elixir-nvim]
+src.git = "https://github.com/mhanberg/elixir.nvim.git"
+fetch.github = "mhanberg/elixir.nvim"
+
+[other-nvim]
+src.git = "https://github.com/rgroli/other.nvim.git"
+fetch.github = "rgroli/other.nvim"
+
+[pretty-fold-nvim]
+src.git = "https://github.com/anuvyklack/pretty-fold.nvim.git"
+fetch.github = "anuvyklack/pretty-fold.nvim"
+
+[vim-just]
+src.git = "https://github.com/NoahTheDuke/vim-just.git"
+fetch.github = "NoahTheDuke/vim-just"

@@ -50,13 +50,15 @@
                 inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
               }
               // extra);
+          plugins = pkgs.callPackages ./pkgs/plugins {
+            inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
+          };
         in {
-          elixir-nvim = callVim ./pkgs/elixir-nvim.nix {};
-
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
-            inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex tree-sitter-just vim-just;
+            inherit (plugins) elixir-nvim pretty-fold-nvim vim-just;
+            inherit (config.packages) tree-sitter-eex tree-sitter-just;
           };
 
           nvfetcher = pkgs.symlinkJoin {
@@ -69,7 +71,7 @@
             '';
           };
 
-          pretty-fold-nvim = callVim ./pkgs/pretty-fold-nvim.nix {};
+          inherit (plugins) elixir-nvim other-nvim pretty-fold-nvim vim-just;
 
           tree-sitter-eex =
             pkgs.callPackage
@@ -96,10 +98,7 @@
                 sha256 = "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=";
               };
             };
-
-          vim-just = callVim ./pkgs/vim-just.nix {};
         };
       };
-      flake = {};
     };
 }
