@@ -56,7 +56,7 @@
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
-            inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex;
+            inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex tree-sitter-just;
           };
 
           pretty-fold-nvim = callVim ./pkgs/pretty-fold-nvim.nix {};
@@ -71,6 +71,19 @@
                 repo = "tree-sitter-eex";
                 rev = "v0.1.0";
                 sha256 = "sha256-UPq62MkfGFh9m/UskoB9uBDIYOcotITCJXDyrbg/wKY=";
+              };
+            };
+
+          tree-sitter-just =
+            pkgs.callPackage
+            (inputs.nixpkgs + /pkgs/development/tools/parsing/tree-sitter/grammar.nix) {} {
+              language = "just";
+              version = "unstable-2021-11-02";
+              source = pkgs.fetchFromGitHub {
+                owner = "IndianBoy42";
+                repo = "tree-sitter-just";
+                rev = "8af0aab79854aaf25b620a52c39485849922f766";
+                sha256 = "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=";
               };
             };
         };

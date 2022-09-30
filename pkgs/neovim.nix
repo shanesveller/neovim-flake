@@ -19,6 +19,7 @@
   elixir-nvim,
   pretty-fold-nvim,
   tree-sitter-eex,
+  tree-sitter-just,
 }: let
   my-paths = writeTextFile {
     name = "paths-lua";
@@ -72,6 +73,7 @@
           tree-sitter-html
           tree-sitter-javascript
           tree-sitter-json
+          tree-sitter-just
           tree-sitter-latex
           tree-sitter-lua
           tree-sitter-make
