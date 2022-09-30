@@ -32,6 +32,10 @@ g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_ruby_provider = 0
 
+g.loaded_remote_plugins = 1
+g.loaded_spellfile_plugin = 1
+g.loaded_tutor_mode_plugin = 1
+
 -- Prevent file cruft
 o.backup = false
 o.swapfile = false
