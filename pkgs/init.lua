@@ -304,6 +304,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 local lspconfig = require("lspconfig")
 
+---- Keymap {{{
 local on_attach_keymaps = function(_, bufnr)
 	wk.register({
 		g = {
@@ -325,11 +326,16 @@ local on_attach_keymaps = function(_, bufnr)
 		},
 	}, { buffer = bufnr })
 end
+---- }}}
 
+---- Null-ls {{{
 local augroup = api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
+		-- Elixir
+		null_ls.builtins.diagnostics.credo,
+		null_ls.builtins.formatting.mix,
 		-- Git
 		null_ls.builtins.code_actions.gitsigns,
 		-- Lua
@@ -358,6 +364,7 @@ null_ls.setup({
 		end
 	end,
 })
+---- }}}
 
 ---- }}}
 
