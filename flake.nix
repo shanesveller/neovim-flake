@@ -40,7 +40,7 @@
           settings = {statix.ignore = [".direnv/*"];};
         };
         devShells.default = pkgs.mkShell {
-          packages = (with pkgs; [just nix-tree]) ++ (with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua]);
+          packages = (with pkgs; [just nix-tree]) ++ (with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua]) ++ (with config.packages; [nvfetcher]);
           inherit (config.checks.pre-commit-check) shellHook;
         };
         packages = let
@@ -57,6 +57,16 @@
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
             inherit (config.packages) elixir-nvim pretty-fold-nvim tree-sitter-eex tree-sitter-just vim-just;
+          };
+
+          nvfetcher = pkgs.symlinkJoin {
+            name = "nvfetcher";
+            paths = [pkgs.nvfetcher];
+            nativeBuildInputs = [pkgs.makeWrapper];
+            postBuild = ''
+              wrapProgram $out/bin/nvfetcher \
+                --set NIX_PATH nixpkgs=${inputs.nixpkgs}
+            '';
           };
 
           pretty-fold-nvim = callVim ./pkgs/pretty-fold-nvim.nix {};
