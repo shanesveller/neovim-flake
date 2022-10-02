@@ -3,6 +3,7 @@
 
   inputs = {
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     flake-utils.url = "github:numtide/flake-utils";
     # https://github.com/neovim/neovim/compare/v0.8.0...47e60da7210209330767615c234ce181b6b67a08
     neovim.url = "github:neovim/neovim/47e60da7210209330767615c234ce181b6b67a08?dir=contrib";
