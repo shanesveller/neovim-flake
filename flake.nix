@@ -4,7 +4,8 @@
   inputs = {
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
-    neovim.url = "github:neovim/neovim?dir=contrib";
+    # https://github.com/neovim/neovim/compare/v0.8.0...47e60da7210209330767615c234ce181b6b67a08
+    neovim.url = "github:neovim/neovim/47e60da7210209330767615c234ce181b6b67a08?dir=contrib";
     neovim.inputs.flake-utils.follows = "flake-utils";
     neovim.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
