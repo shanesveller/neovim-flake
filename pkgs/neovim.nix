@@ -119,6 +119,8 @@
       # Languages
       ## Elixir
       elixir-nvim
+      ## Rust
+      rust-tools-nvim
     ];
   };
 in
