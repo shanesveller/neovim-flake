@@ -453,4 +453,10 @@ lspconfig.rnix.setup({})
 
 -- }}}
 
+-- Rust {{{
+
+lspconfig.rust_analyzer.setup({})
+
+-- }}}
+
 ---- }}}
