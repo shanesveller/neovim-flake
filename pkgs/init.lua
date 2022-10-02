@@ -418,21 +418,17 @@ api.nvim_create_autocmd("BufDelete", {
 
 ---- Languages {{{
 
-local paths = require("user.paths")
-
 -- Elixir {{{
 
 require("elixir").setup({
-	cmd = { paths.elixir_ls },
+	cmd = { "elixir-ls" },
 })
 
 -- }}}
 
 -- Lua {{{
 
-local luadev = require("lua-dev").setup({
-	cmd = { paths.sumneko },
-})
+local luadev = require("lua-dev").setup({})
 lspconfig.sumneko_lua.setup(luadev)
 
 vim.api.nvim_create_autocmd({ "FileType" }, {

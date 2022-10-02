@@ -14,7 +14,6 @@
   statix,
   stylua,
   # LSP Servers
-  elixir_ls,
   sumneko-lua-language-server,
   # Plugins
   elixir-nvim,
@@ -23,19 +22,6 @@
   tree-sitter-just,
   vim-just,
 }: let
-  my-paths = writeTextFile {
-    name = "paths-lua";
-    destination = "/lua/user/paths.lua";
-    text = ''
-      return {
-        elixir_ls = "${lib.getExe elixir_ls}",
-        sumneko = "${lib.getExe sumneko-lua-language-server}",
-      }
-    '';
-    checkPhase = ''
-      ${lib.getExe stylua} "$target"
-    '';
-  };
   config = neovimUtils.makeNeovimConfig {
     extraLuaPackages = luaPackages: [];
     extraPython3Packages = pythonPackages: [];
@@ -49,9 +35,6 @@
     withRuby = false;
 
     customRC = ''
-      lua << EOF
-        vim.g.my_paths = { elixir_ls = "${lib.getExe elixir_ls}", }
-      EOF
       luafile ${./init.lua}
     '';
 
@@ -123,7 +106,6 @@
       # Keybinds
       which-key-nvim
       # LSP
-      my-paths
       lspkind-nvim
       lua-dev-nvim
       null-ls-nvim
@@ -147,6 +129,6 @@ in
           "--suffix"
           "PATH"
           ":"
-          (lib.makeBinPath [alejandra elixir_ls statix stylua sumneko-lua-language-server])
+          (lib.makeBinPath [alejandra statix stylua sumneko-lua-language-server])
         ];
     })
