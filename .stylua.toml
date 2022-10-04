@@ -1,4 +1,4 @@
-call_parentheses = "Always"
+# call_parentheses = "Always"
 collapse_simple_statement = "Never"
 column_width = 120
 indent_type = "Spaces"
