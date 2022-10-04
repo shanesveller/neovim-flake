@@ -369,8 +369,8 @@ null_ls.setup({
 				callback = function()
 					vim.lsp.buf.format({
 						bufnr = bufnr,
-						filter = function(client)
-							return client.name ~= "rnix"
+						filter = function(this_client)
+							return this_client.name ~= "rnix"
 						end,
 					})
 				end,
