@@ -146,6 +146,9 @@ o.smartindent = true
 o.softtabstop = 2
 o.tabstop = 2
 
+-- Pairs
+require("mini.pairs").setup({})
+
 -- Scrolling
 o.scrolloff = 8
 o.sidescrolloff = 8
