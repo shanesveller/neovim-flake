@@ -139,6 +139,7 @@
       ## Elixir
       elixir-nvim
       ## Rust
+      crates-nvim
       rust-tools-nvim
     ];
   };
