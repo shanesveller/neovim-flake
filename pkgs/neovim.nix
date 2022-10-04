@@ -115,6 +115,8 @@
       # Syntax highlighting
       nvim-treesitter'
       vim-just
+      # Utility
+      mini-nvim
       # Workflow
       vim-projectionist
       # Languages
