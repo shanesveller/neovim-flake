@@ -74,13 +74,16 @@ g.completopt = "menu,menuone,noinsert"
 
 local lspkind = require("lspkind")
 
-require("cmp").setup({
-    sources = {
+local cmp = require("cmp")
+cmp.setup({
+    sources = cmp.config.sources({
         { name = "nvim_lua" },
         { name = "nvim_lsp" },
+        { name = "nvim_lsp_signature_help" },
         { name = "path" },
+    }, {
         { name = "buffer", keyword_length = 5 },
-    },
+    }),
 
     formatting = {
         format = lspkind.cmp_format({

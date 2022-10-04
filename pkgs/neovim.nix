@@ -87,6 +87,9 @@
       cmp-buffer
       cmp-cmdline
       cmp-git
+      cmp-nvim-lsp
+      cmp-nvim-lsp-document-symbol
+      cmp-nvim-lsp-signature-help
       cmp-nvim-lua
       cmp-path
       nvim-cmp
