@@ -15,6 +15,17 @@
       sha256 = "sha256-uWTvfMBKJs2DvknOqKaOYKHBgCZZ+mb93WrSfpZZ7Vs=";
     };
   };
+  neorg = {
+    pname = "neorg";
+    version = "c5345e72ebdd84585eec6272755aa26233431317";
+    src = fetchFromGitHub {
+      owner = "nvim-neorg";
+      repo = "neorg";
+      rev = "c5345e72ebdd84585eec6272755aa26233431317";
+      fetchSubmodules = false;
+      sha256 = "sha256-xfaGcjXyFoFMMKFuFUpbHIqfMnbj+2Bjbm7DHoJ/4kY=";
+    };
+  };
   other-nvim = {
     pname = "other-nvim";
     version = "a2ae9e03d08c6c5e8f60cc1db58cbf4ada2ae338";

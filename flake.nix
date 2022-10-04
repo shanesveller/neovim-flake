@@ -63,7 +63,6 @@
           inherit neovim;
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
-            inherit (plugins) elixir-nvim pretty-fold-nvim vim-just;
             inherit
               (grammars)
               tree-sitter-eex
@@ -71,6 +70,13 @@
               tree-sitter-norg
               tree-sitter-norg-meta
               tree-sitter-norg-table
+              ;
+            inherit
+              (plugins)
+              elixir-nvim
+              neorg
+              pretty-fold-nvim
+              vim-just
               ;
           };
 
@@ -84,7 +90,6 @@
             '';
           };
 
-          inherit (plugins) elixir-nvim other-nvim pretty-fold-nvim vim-just;
           inherit
             (grammars)
             tree-sitter-eex
@@ -92,6 +97,15 @@
             tree-sitter-norg
             tree-sitter-norg-meta
             tree-sitter-norg-table
+            ;
+
+          inherit
+            (plugins)
+            elixir-nvim
+            neorg
+            other-nvim
+            pretty-fold-nvim
+            vim-just
             ;
         };
       };

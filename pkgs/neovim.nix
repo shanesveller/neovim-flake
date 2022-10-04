@@ -18,6 +18,8 @@
   sumneko-lua-language-server,
   # Plugins
   elixir-nvim,
+  neorg,
+  neorg-telescope,
   pretty-fold-nvim,
   tree-sitter-eex,
   tree-sitter-just,
@@ -117,6 +119,8 @@
       gitsigns-nvim
       # Keybinds
       which-key-nvim
+      # Knowledge/Documentations
+      neorg
       # LSP
       fidget-nvim
       lspkind-nvim

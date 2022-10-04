@@ -18,6 +18,25 @@
         },
         "version": "06614fa79ae2b914ded09e72f5574df1fc1024b4"
     },
+    "neorg": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "neorg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "neorg",
+            "rev": "c5345e72ebdd84585eec6272755aa26233431317",
+            "sha256": "sha256-xfaGcjXyFoFMMKFuFUpbHIqfMnbj+2Bjbm7DHoJ/4kY=",
+            "type": "github"
+        },
+        "version": "c5345e72ebdd84585eec6272755aa26233431317"
+    },
     "other-nvim": {
         "cargoLocks": null,
         "extract": null,

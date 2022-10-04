@@ -5,6 +5,7 @@
   ...
 }: let
   dependencies = with vimPlugins; {
+    neorg = [plenary-nvim];
     pretty-fold-nvim = [nvim-lspconfig plenary-nvim];
   };
 
