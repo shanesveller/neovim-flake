@@ -136,6 +136,9 @@ require("Comment").setup({})
 
 -- }}}
 
+-- Highlight word under cursor
+require("mini.cursorword").setup({})
+
 -- Indentation
 o.expandtab = true
 o.shiftwidth = 2
