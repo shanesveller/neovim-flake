@@ -384,7 +384,7 @@ null_ls.setup({
                     vim.lsp.buf.format({
                         bufnr = bufnr,
                         filter = function(this_client)
-                            return this_client.name ~= "rnix"
+                            return this_client.name ~= "rnix" and this_client.name ~= "sumneko_lua"
                         end,
                     })
                 end,
