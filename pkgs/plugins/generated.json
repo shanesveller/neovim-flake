@@ -37,6 +37,25 @@
         },
         "version": "c5345e72ebdd84585eec6272755aa26233431317"
     },
+    "neorg-telescope": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "neorg-telescope",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "neorg-telescope",
+            "rev": "b61ff59c7008fabe0ead42adb1a1498aec2b6fe1",
+            "sha256": "sha256-DzdmTQBNMJpp2Pnjy32a7AJrST+GLb0Hy5+tTjd8a5Q=",
+            "type": "github"
+        },
+        "version": "b61ff59c7008fabe0ead42adb1a1498aec2b6fe1"
+    },
     "other-nvim": {
         "cargoLocks": null,
         "extract": null,

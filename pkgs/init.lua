@@ -391,6 +391,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
         require("neorg").setup({
             load = {
                 ["core.defaults"] = {},
+                ["core.integrations.telescope"] = {},
                 ["core.integrations.treesitter"] = {
                     config = {
                         install_parsers = false,

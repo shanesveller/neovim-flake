@@ -75,6 +75,7 @@
               (plugins)
               elixir-nvim
               neorg
+              neorg-telescope
               pretty-fold-nvim
               vim-just
               ;
@@ -103,6 +104,7 @@
             (plugins)
             elixir-nvim
             neorg
+            neorg-telescope
             other-nvim
             pretty-fold-nvim
             vim-just

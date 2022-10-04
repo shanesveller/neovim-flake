@@ -121,6 +121,7 @@
       which-key-nvim
       # Knowledge/Documentations
       neorg
+      neorg-telescope
       # LSP
       fidget-nvim
       lspkind-nvim

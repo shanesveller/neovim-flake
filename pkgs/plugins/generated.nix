@@ -26,6 +26,17 @@
       sha256 = "sha256-xfaGcjXyFoFMMKFuFUpbHIqfMnbj+2Bjbm7DHoJ/4kY=";
     };
   };
+  neorg-telescope = {
+    pname = "neorg-telescope";
+    version = "b61ff59c7008fabe0ead42adb1a1498aec2b6fe1";
+    src = fetchFromGitHub {
+      owner = "nvim-neorg";
+      repo = "neorg-telescope";
+      rev = "b61ff59c7008fabe0ead42adb1a1498aec2b6fe1";
+      fetchSubmodules = false;
+      sha256 = "sha256-DzdmTQBNMJpp2Pnjy32a7AJrST+GLb0Hy5+tTjd8a5Q=";
+    };
+  };
   other-nvim = {
     pname = "other-nvim";
     version = "a2ae9e03d08c6c5e8f60cc1db58cbf4ada2ae338";
