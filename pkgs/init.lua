@@ -157,6 +157,9 @@ o.sidescrolloff = 8
 o.ignorecase = true
 o.smartcase = true
 
+-- Surround
+require("mini.surround").setup({})
+
 ---- }}}
 
 ---- File Tree {{{
