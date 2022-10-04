@@ -1,0 +1,40 @@
+{
+    "tree-sitter-eex": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "tree-sitter-eex",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "connorlay",
+            "repo": "tree-sitter-eex",
+            "rev": "f742f2fe327463335e8671a87c0b9b396905d1d1",
+            "sha256": "sha256-UPq62MkfGFh9m/UskoB9uBDIYOcotITCJXDyrbg/wKY=",
+            "type": "github"
+        },
+        "version": "f742f2fe327463335e8671a87c0b9b396905d1d1"
+    },
+    "tree-sitter-just": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "tree-sitter-just",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "IndianBoy42",
+            "repo": "tree-sitter-just",
+            "rev": "8af0aab79854aaf25b620a52c39485849922f766",
+            "sha256": "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=",
+            "type": "github"
+        },
+        "version": "8af0aab79854aaf25b620a52c39485849922f766"
+    }
+}

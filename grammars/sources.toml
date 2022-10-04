@@ -1,0 +1,7 @@
+[tree-sitter-eex]
+src.git = "https://github.com/connorlay/tree-sitter-eex.git"
+fetch.github = "connorlay/tree-sitter-eex"
+
+[tree-sitter-just]
+src.git = "https://github.com/IndianBoy42/tree-sitter-just.git"
+fetch.github = "IndianBoy42/tree-sitter-just"

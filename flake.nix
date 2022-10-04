@@ -25,9 +25,10 @@
       systems = ["aarch64-darwin" "x86_64-darwin" "x86_64-linux"];
       perSystem = {
         config,
-        self',
         inputs',
+        lib,
         pkgs,
+        self',
         system,
         ...
       }: {
@@ -52,11 +53,9 @@
           };
         packages = let
           inherit (inputs'.neovim.packages) neovim;
-          callVim = path: extra:
-            pkgs.callPackage path ({
-                inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
-              }
-              // extra);
+          grammars = pkgs.callPackages ./grammars {
+            inherit inputs lib pkgs;
+          };
           plugins = pkgs.callPackages ./pkgs/plugins {
             inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
           };
@@ -65,7 +64,11 @@
           neovimConfigured = pkgs.callPackage ./pkgs/neovim.nix {
             neovim-unwrapped = neovim;
             inherit (plugins) elixir-nvim pretty-fold-nvim vim-just;
-            inherit (config.packages) tree-sitter-eex tree-sitter-just;
+            inherit
+              (grammars)
+              tree-sitter-eex
+              tree-sitter-just
+              ;
           };
 
           nvfetcher = pkgs.symlinkJoin {
@@ -79,32 +82,11 @@
           };
 
           inherit (plugins) elixir-nvim other-nvim pretty-fold-nvim vim-just;
-
-          tree-sitter-eex =
-            pkgs.callPackage
-            (inputs.nixpkgs + /pkgs/development/tools/parsing/tree-sitter/grammar.nix) {} {
-              language = "eex";
-              version = "0.1.0";
-              source = pkgs.fetchFromGitHub {
-                owner = "connorlay";
-                repo = "tree-sitter-eex";
-                rev = "v0.1.0";
-                sha256 = "sha256-UPq62MkfGFh9m/UskoB9uBDIYOcotITCJXDyrbg/wKY=";
-              };
-            };
-
-          tree-sitter-just =
-            pkgs.callPackage
-            (inputs.nixpkgs + /pkgs/development/tools/parsing/tree-sitter/grammar.nix) {} {
-              language = "just";
-              version = "unstable-2021-11-02";
-              source = pkgs.fetchFromGitHub {
-                owner = "IndianBoy42";
-                repo = "tree-sitter-just";
-                rev = "8af0aab79854aaf25b620a52c39485849922f766";
-                sha256 = "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=";
-              };
-            };
+          inherit
+            (grammars)
+            tree-sitter-eex
+            tree-sitter-just
+            ;
         };
       };
     };
