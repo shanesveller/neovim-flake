@@ -97,10 +97,17 @@ cmp.setup({
         { name = "nvim_lua" },
         { name = "nvim_lsp" },
         { name = "nvim_lsp_signature_help" },
+        { name = "luasnip" },
         { name = "path" },
     }, {
         { name = "buffer", keyword_length = 5 },
     }),
+
+    snippet = {
+        expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+        end,
+    },
 
     mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -149,6 +156,8 @@ for _, key in ipairs({ "/", "?" }) do
     })
 end
 
+---- }}}
+
 ---- File types {{{
 
 cmp.setup.filetype("gitcommit", {
@@ -161,6 +170,27 @@ cmp.setup.filetype("gitcommit", {
 })
 
 ---- }}}
+
+---- Luasnip {{{
+
+local luasnip = require("luasnip")
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
+    if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+    end
+end, { silent = true })
+
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
+    if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+    end
+end, { silent = true })
+
+vim.keymap.set("i", "<C-l>", function()
+    if luasnip.choice_active() then
+        luasnip.change_choice(1)
+    end
+end)
 
 ---- }}}
 

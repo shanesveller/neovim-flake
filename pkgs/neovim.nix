@@ -89,12 +89,14 @@
       cmp-buffer
       cmp-cmdline
       cmp-git
+      cmp_luasnip
       cmp-nvim-lsp
       cmp-nvim-lsp-document-symbol
       cmp-nvim-lsp-signature-help
       cmp-nvim-lua
       cmp-path
       cmp-spell
+      luasnip
       nvim-cmp
       # Editing
       comment-nvim
