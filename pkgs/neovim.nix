@@ -107,6 +107,7 @@
       # Keybinds
       which-key-nvim
       # LSP
+      fidget-nvim
       lspkind-nvim
       lua-dev-nvim
       null-ls-nvim

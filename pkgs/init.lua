@@ -380,6 +380,8 @@ null_ls.setup({
 })
 ---- }}}
 
+require("fidget").setup({})
+
 ---- }}}
 
 ---- Syntax highlighting {{{
