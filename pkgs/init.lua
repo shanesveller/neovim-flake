@@ -70,7 +70,9 @@ require("lualine").setup({
 
 ---- Completion {{{
 
-g.completopt = "menu,menuone,noinsert"
+g.completeopt = "menu,menuone,noinsert"
+g.spell = true
+g.spell_lang = { "en_us" }
 
 local lspkind = require("lspkind")
 
