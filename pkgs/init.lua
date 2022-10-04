@@ -106,6 +106,9 @@ require("cmp").setup({
 -- Access system clipboard
 o.clipboard = "unnamedplus"
 
+-- Alignment
+require("mini.align").setup({})
+
 -- Comments
 require("Comment").setup({})
 
