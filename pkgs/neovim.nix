@@ -93,6 +93,7 @@
       # Editing
       comment-nvim
       direnv-vim
+      indent-blankline-nvim
       pretty-fold-nvim
       # Finder
       telescope-nvim

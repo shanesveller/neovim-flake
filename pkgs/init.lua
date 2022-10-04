@@ -146,6 +146,8 @@ o.smartindent = true
 o.softtabstop = 2
 o.tabstop = 2
 
+require("indent_blankline").setup({})
+
 -- Pairs
 require("mini.pairs").setup({})
 
