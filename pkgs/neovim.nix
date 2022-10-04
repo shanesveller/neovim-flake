@@ -92,6 +92,7 @@
       cmp-nvim-lsp-signature-help
       cmp-nvim-lua
       cmp-path
+      cmp-spell
       nvim-cmp
       # Editing
       comment-nvim

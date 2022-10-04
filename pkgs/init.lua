@@ -136,6 +136,19 @@ for _, key in ipairs({ "/", "?" }) do
     })
 end
 
+---- File types {{{
+
+cmp.setup.filetype("gitcommit", {
+    sources = cmp.config.sources({
+        { name = "cmp_git" },
+        { name = "spell" },
+    }, {
+        { name = "buffer" },
+    }),
+})
+
+---- }}}
+
 ---- }}}
 
 ---- }}}
