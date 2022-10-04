@@ -5,3 +5,15 @@ fetch.github = "connorlay/tree-sitter-eex"
 [tree-sitter-just]
 src.git = "https://github.com/IndianBoy42/tree-sitter-just.git"
 fetch.github = "IndianBoy42/tree-sitter-just"
+
+[tree-sitter-norg]
+src.git = "https://github.com/nvim-neorg/tree-sitter-norg.git"
+fetch.github = "nvim-neorg/tree-sitter-norg"
+
+[tree-sitter-norg-meta]
+src.git = "https://github.com/nvim-neorg/tree-sitter-norg-meta.git"
+fetch.github = "nvim-neorg/tree-sitter-norg-meta"
+
+[tree-sitter-norg-table]
+src.git = "https://github.com/nvim-neorg/tree-sitter-norg-table.git"
+fetch.github = "nvim-neorg/tree-sitter-norg-table"

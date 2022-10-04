@@ -21,6 +21,9 @@
   pretty-fold-nvim,
   tree-sitter-eex,
   tree-sitter-just,
+  tree-sitter-norg,
+  tree-sitter-norg-meta,
+  tree-sitter-norg-table,
   vim-just,
 }: let
   config = neovimUtils.makeNeovimConfig {
@@ -66,6 +69,9 @@
           tree-sitter-markdown
           tree-sitter-markdown-inline
           tree-sitter-nix
+          tree-sitter-norg
+          tree-sitter-norg-meta
+          tree-sitter-norg-table
           tree-sitter-regex
           tree-sitter-ruby
           tree-sitter-rust

@@ -36,5 +36,62 @@
             "type": "github"
         },
         "version": "8af0aab79854aaf25b620a52c39485849922f766"
+    },
+    "tree-sitter-norg": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "tree-sitter-norg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "tree-sitter-norg",
+            "rev": "5d9c76b5c9927955f7c5d5d946397584e307f69f",
+            "sha256": "sha256-x19Db6oVAJyNqtj0yMG9HAjzJrPuy52xp5k17r4j924=",
+            "type": "github"
+        },
+        "version": "5d9c76b5c9927955f7c5d5d946397584e307f69f"
+    },
+    "tree-sitter-norg-meta": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "tree-sitter-norg-meta",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "tree-sitter-norg-meta",
+            "rev": "4687b53e656b920cde6c0b9a7b9acf9a665cd838",
+            "sha256": "sha256-+NInywA8KOfAVnetuRW/9GJIqFWijrMr23dhZx4b6EQ=",
+            "type": "github"
+        },
+        "version": "4687b53e656b920cde6c0b9a7b9acf9a665cd838"
+    },
+    "tree-sitter-norg-table": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "tree-sitter-norg-table",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "tree-sitter-norg-table",
+            "rev": "f354ea343b8803948e6e1df36eb586e31c529900",
+            "sha256": "sha256-xTH4LmqhtfyN9JGQdquJLQz1McZQItdEY5HpJxbuYC0=",
+            "type": "github"
+        },
+        "version": "f354ea343b8803948e6e1df36eb586e31c529900"
     }
 }

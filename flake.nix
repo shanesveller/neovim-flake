@@ -68,6 +68,9 @@
               (grammars)
               tree-sitter-eex
               tree-sitter-just
+              tree-sitter-norg
+              tree-sitter-norg-meta
+              tree-sitter-norg-table
               ;
           };
 
@@ -86,6 +89,9 @@
             (grammars)
             tree-sitter-eex
             tree-sitter-just
+            tree-sitter-norg
+            tree-sitter-norg-meta
+            tree-sitter-norg-table
             ;
         };
       };
