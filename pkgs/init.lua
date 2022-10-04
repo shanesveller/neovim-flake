@@ -445,13 +445,6 @@ require("elixir").setup({
 local luadev = require("lua-dev").setup({})
 lspconfig.sumneko_lua.setup(luadev)
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = "lua",
-    callback = function()
-        vim.bo.expandtab = false
-    end,
-})
-
 -- }}}
 
 -- Nix {{{
