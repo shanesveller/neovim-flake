@@ -70,6 +70,8 @@ require("lualine").setup({
 
 ---- Completion {{{
 
+g.completopt = "menu,menuone,noinsert"
+
 local lspkind = require("lspkind")
 
 require("cmp").setup({
