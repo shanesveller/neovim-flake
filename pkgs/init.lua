@@ -462,6 +462,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 local lspconfig = require("lspconfig")
 
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 ---- Keymap {{{
 local on_attach_keymaps = function(_, bufnr)
     wk.register({
@@ -589,6 +591,7 @@ api.nvim_create_autocmd("BufDelete", {
 -- Elixir {{{
 
 require("elixir").setup({
+    capabilities = capabilities,
     cmd = { "elixir-ls" },
 })
 
@@ -598,6 +601,7 @@ require("elixir").setup({
 
 require("neodev").setup({})
 lspconfig.sumneko_lua.setup({
+    capabilities = capabilities,
     settings = {
         Lua = {
             completion = {
@@ -611,7 +615,9 @@ lspconfig.sumneko_lua.setup({
 
 -- Nix {{{
 
-lspconfig.nil_ls.setup({})
+lspconfig.nil_ls.setup({
+    capabilities = capabilities,
+})
 
 -- }}}
 
@@ -620,7 +626,9 @@ lspconfig.nil_ls.setup({})
 local rt = require("rust-tools")
 
 rt.setup({
-    server = {},
+    server = {
+        capabilities = capabilities,
+    },
 })
 
 -- }}}
