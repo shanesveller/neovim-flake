@@ -61,9 +61,9 @@ o.laststatus = 3
 vim.cmd.colorscheme("base16-tomorrow-night")
 
 require("lualine").setup({
-	options = {
-		theme = "base16",
-	},
+    options = {
+        theme = "base16",
+    },
 })
 
 ---- }}}
@@ -73,30 +73,30 @@ require("lualine").setup({
 local lspkind = require("lspkind")
 
 require("cmp").setup({
-	sources = {
-		{ name = "nvim_lua" },
-		{ name = "nvim_lsp" },
-		{ name = "path" },
-		{ name = "buffer", keyword_length = 5 },
-	},
+    sources = {
+        { name = "nvim_lua" },
+        { name = "nvim_lsp" },
+        { name = "path" },
+        { name = "buffer", keyword_length = 5 },
+    },
 
-	formatting = {
-		format = lspkind.cmp_format({
-			with_text = true,
-			menu = {
-				buffer = "[buf]",
-				nvim_lsp = "[LSP]",
-				nvim_lua = "[api]",
-				path = "[path]",
-				luasnip = "[snip]",
-			},
-		}),
-	},
+    formatting = {
+        format = lspkind.cmp_format({
+            with_text = true,
+            menu = {
+                buffer = "[buf]",
+                nvim_lsp = "[LSP]",
+                nvim_lua = "[api]",
+                path = "[path]",
+                luasnip = "[snip]",
+            },
+        }),
+    },
 
-	experimental = {
-		native_menu = false,
-		ghost_text = true,
-	},
+    experimental = {
+        native_menu = false,
+        ghost_text = true,
+    },
 })
 
 ---- }}}
@@ -153,10 +153,10 @@ o.smartcase = true
 ---- File Tree {{{
 
 local nvim_tree_lazy = function()
-	require("nvim-web-devicons").setup({})
-	require("nvim-tree").setup({})
-	vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim tree" })
-	vim.cmd("NvimTreeToggle")
+    require("nvim-web-devicons").setup({})
+    require("nvim-tree").setup({})
+    vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim tree" })
+    vim.cmd("NvimTreeToggle")
 end
 
 ---- }}}
@@ -169,25 +169,25 @@ tel.load_extension("fzf")
 tel.load_extension("project")
 
 tel.setup({
-	defaults = {
-		path_display = { shorten = 3 },
-		preview = { hide_on_startup = true },
-	},
-	extensions = {
-		fzf = {
-			fuzzy = true,
-			override_generic_sorter = true,
-			override_file_sorter = true,
-			case_mode = "smart_case",
-		},
-		project = {
-			base_dirs = {
-				"~/.dotfiles",
-				"~/src",
-			},
-			theme = "dropdown",
-		},
-	},
+    defaults = {
+        path_display = { shorten = 3 },
+        preview = { hide_on_startup = true },
+    },
+    extensions = {
+        fzf = {
+            fuzzy = true,
+            override_generic_sorter = true,
+            override_file_sorter = true,
+            case_mode = "smart_case",
+        },
+        project = {
+            base_dirs = {
+                "~/.dotfiles",
+                "~/src",
+            },
+            theme = "dropdown",
+        },
+    },
 })
 
 ---- }}}
@@ -195,16 +195,16 @@ tel.setup({
 ---- Git {{{
 
 vim.api.nvim_create_autocmd({ "BufRead" }, {
-	group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
-	callback = function()
-		vim.fn.system("git rev-parse " .. vim.fn.expand("%:p:h"))
-		if vim.v.shell_error == 0 then
-			vim.api.nvim_del_augroup_by_name("GitSignsLazyLoad")
-			vim.schedule(function()
-				require("gitsigns").setup({})
-			end)
-		end
-	end,
+    group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
+    callback = function()
+        vim.fn.system("git rev-parse " .. vim.fn.expand("%:p:h"))
+        if vim.v.shell_error == 0 then
+            vim.api.nvim_del_augroup_by_name("GitSignsLazyLoad")
+            vim.schedule(function()
+                require("gitsigns").setup({})
+            end)
+        end
+    end,
 })
 
 ---- }}}
@@ -215,98 +215,98 @@ local wk = require("which-key")
 wk.setup({})
 
 wk.register({
-	["<leader>"] = {
-		["'"] = { "<cmd>Telescope resume<CR>", "Resume last search" },
-		[","] = { "<cmd>Telescope buffers<CR>", "List buffers" },
-		["`"] = { "<cmd>buffer #<CR>", "Switch to alternate buffer" },
-		b = {
-			name = "Buffers",
-			b = { "<cmd>buffers<CR>", "List" },
-			B = { "<cmd>Telescope buffers<CR>", "List" },
-			d = { "<cmd>bd<CR>", "Delete" },
-			D = { "<cmd>%bd<CR>", "Delete All" },
-			r = { "<cmd>edit!<CR>", "Revert" },
-		},
-		e = { nvim_tree_lazy, "nvim-tree.lua" },
-		f = {
-			name = "Find/Files",
-			["."] = { "<cmd>Telescope find_files cwd=%:h<CR>", "Find files" },
-			f = { "<cmd>Telescope find_files<CR>", "Find files" },
-			s = { "<cmd>write<CR>", "Save" },
-			x = {
-				function()
-					vim.cmd.write()
-					vim.cmd.source("%")
-				end,
-				"Save and source",
-			},
-		},
-		g = {
-			name = "Git",
-			["["] = { "<cmd>Gitsigns prev_hunk<CR>", "Previous hunk" },
-			["]"] = { "<cmd>Gitsigns next_hunk<CR>", "Previous hunk" },
-			A = { "<cmd>Git commit --amend --verbose<CR>", "Amend commit" },
-			b = { "<cmd>Gitsigns blame_line<CR>", "Blame current line" },
-			B = { "<cmd>Git blame<CR>", "Blame current file" },
-			c = { "<cmd>Git commit --verbose<CR>", "Commit" },
-			d = { "<cmd>Git diff<CR>", "Diff" },
-			D = { "<cmd>Git diff --staged<CR>", "Diff Staged" },
-			g = { "<cmd>Git<CR>", "Git Status" },
-			s = { "<cmd>Gitsigns stage_hunk<CR>", "Stage hunk" },
-			S = { "<cmd>Gitsigns stage_buffer<CR>", "Stage file" },
-		},
-		l = {
-			name = "LSP",
-			i = { "<cmd>LspInfo<CR>", "Info" },
-			L = { "<cmd>LspLog<CR>", "Log" },
-			R = { "<cmd>LspRestart<CR>", "Restart" },
-			s = { "<cmd>LspStart<CR>", "Start" },
-			S = { "<cmd>LspStop<CR>", "Stop" },
-		},
-		o = {
-			name = "Open",
-			d = { "<cmd>Telescope git_files cwd=~/.dotfiles show_untracked=true<CR>", "Dotfiles" },
-			v = { "<cmd>Telescope git_files cwd=~/src/neovim-flake show_untracked=true<CR>", "Neovim" },
-		},
-		p = {
-			name = "Projects",
-			f = { "<cmd>Telescope git_files show_untracked=true<CR>", "Find project files" },
-			p = { "<cmd>lua require('telescope').extensions.project.project({})<CR>", "Find project" },
-		},
-		s = {
-			name = "Search",
-			d = { "<cmd>Telescope live_grep cwd=%:h<CR>", "Search current directory" },
-			p = { "<cmd>Telescope live_grep<CR>", "Search project" },
-			s = { "<cmd>Telescope current_buffer_fuzzy_find<CR>", "Search current buffer" },
-		},
-		t = {
-			name = "Telescope",
-			g = { "<cmd>Telescope git_status<CR>", "Git Status" },
-			h = { "<cmd>Telescope help_tags<CR>", "Help Tags" },
-			t = { "<cmd>Telescope<CR>", "Telescope" },
-		},
-		w = {
-			name = "Windows",
-			d = { "<cmd>close<CR>", "Close" },
-			h = { "<cmd>wincmd h<CR>", "Left" },
-			H = { "<cmd>wincmd H<CR>", "Left" },
-			j = { "<cmd>wincmd j<CR>", "Down" },
-			J = { "<cmd>wincmd J<CR>", "Down" },
-			k = { "<cmd>wincmd k<CR>", "Up" },
-			K = { "<cmd>wincmd K<CR>", "Up" },
-			l = { "<cmd>wincmd l<CR>", "Right" },
-			L = { "<cmd>wincmd L<CR>", "Right" },
-		},
-	},
+    ["<leader>"] = {
+        ["'"] = { "<cmd>Telescope resume<CR>", "Resume last search" },
+        [","] = { "<cmd>Telescope buffers<CR>", "List buffers" },
+        ["`"] = { "<cmd>buffer #<CR>", "Switch to alternate buffer" },
+        b = {
+            name = "Buffers",
+            b = { "<cmd>buffers<CR>", "List" },
+            B = { "<cmd>Telescope buffers<CR>", "List" },
+            d = { "<cmd>bd<CR>", "Delete" },
+            D = { "<cmd>%bd<CR>", "Delete All" },
+            r = { "<cmd>edit!<CR>", "Revert" },
+        },
+        e = { nvim_tree_lazy, "nvim-tree.lua" },
+        f = {
+            name = "Find/Files",
+            ["."] = { "<cmd>Telescope find_files cwd=%:h<CR>", "Find files" },
+            f = { "<cmd>Telescope find_files<CR>", "Find files" },
+            s = { "<cmd>write<CR>", "Save" },
+            x = {
+                function()
+                    vim.cmd.write()
+                    vim.cmd.source("%")
+                end,
+                "Save and source",
+            },
+        },
+        g = {
+            name = "Git",
+            ["["] = { "<cmd>Gitsigns prev_hunk<CR>", "Previous hunk" },
+            ["]"] = { "<cmd>Gitsigns next_hunk<CR>", "Previous hunk" },
+            A = { "<cmd>Git commit --amend --verbose<CR>", "Amend commit" },
+            b = { "<cmd>Gitsigns blame_line<CR>", "Blame current line" },
+            B = { "<cmd>Git blame<CR>", "Blame current file" },
+            c = { "<cmd>Git commit --verbose<CR>", "Commit" },
+            d = { "<cmd>Git diff<CR>", "Diff" },
+            D = { "<cmd>Git diff --staged<CR>", "Diff Staged" },
+            g = { "<cmd>Git<CR>", "Git Status" },
+            s = { "<cmd>Gitsigns stage_hunk<CR>", "Stage hunk" },
+            S = { "<cmd>Gitsigns stage_buffer<CR>", "Stage file" },
+        },
+        l = {
+            name = "LSP",
+            i = { "<cmd>LspInfo<CR>", "Info" },
+            L = { "<cmd>LspLog<CR>", "Log" },
+            R = { "<cmd>LspRestart<CR>", "Restart" },
+            s = { "<cmd>LspStart<CR>", "Start" },
+            S = { "<cmd>LspStop<CR>", "Stop" },
+        },
+        o = {
+            name = "Open",
+            d = { "<cmd>Telescope git_files cwd=~/.dotfiles show_untracked=true<CR>", "Dotfiles" },
+            v = { "<cmd>Telescope git_files cwd=~/src/neovim-flake show_untracked=true<CR>", "Neovim" },
+        },
+        p = {
+            name = "Projects",
+            f = { "<cmd>Telescope git_files show_untracked=true<CR>", "Find project files" },
+            p = { "<cmd>lua require('telescope').extensions.project.project({})<CR>", "Find project" },
+        },
+        s = {
+            name = "Search",
+            d = { "<cmd>Telescope live_grep cwd=%:h<CR>", "Search current directory" },
+            p = { "<cmd>Telescope live_grep<CR>", "Search project" },
+            s = { "<cmd>Telescope current_buffer_fuzzy_find<CR>", "Search current buffer" },
+        },
+        t = {
+            name = "Telescope",
+            g = { "<cmd>Telescope git_status<CR>", "Git Status" },
+            h = { "<cmd>Telescope help_tags<CR>", "Help Tags" },
+            t = { "<cmd>Telescope<CR>", "Telescope" },
+        },
+        w = {
+            name = "Windows",
+            d = { "<cmd>close<CR>", "Close" },
+            h = { "<cmd>wincmd h<CR>", "Left" },
+            H = { "<cmd>wincmd H<CR>", "Left" },
+            j = { "<cmd>wincmd j<CR>", "Down" },
+            J = { "<cmd>wincmd J<CR>", "Down" },
+            k = { "<cmd>wincmd k<CR>", "Up" },
+            K = { "<cmd>wincmd K<CR>", "Up" },
+            l = { "<cmd>wincmd l<CR>", "Right" },
+            L = { "<cmd>wincmd L<CR>", "Right" },
+        },
+    },
 })
 
 -- Use 'q' to quit from common plugins
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "help", "man", "qf" },
-	callback = function()
-		vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = true, silent = true })
-		vim.bo.buflisted = false
-	end,
+    pattern = { "help", "man", "qf" },
+    callback = function()
+        vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = true, silent = true })
+        vim.bo.buflisted = false
+    end,
 })
 
 ---- }}}
@@ -317,26 +317,26 @@ local lspconfig = require("lspconfig")
 
 ---- Keymap {{{
 local on_attach_keymaps = function(_, bufnr)
-	wk.register({
-		g = {
-			d = { vim.lsp.buf.definition, "Definition" },
-			D = { vim.lsp.buf.declaration, "Declaration" },
-			i = { vim.lsp.buf.implementation, "Go to Implementation" },
-			l = { vim.diagnostic.open_float, "Open Diagnostic Float" },
-			r = { vim.lsp.buf.references, "Symbol References" },
-		},
-		K = { vim.lsp.buf.hover, "LSP Hover" },
-		["<C-k>"] = { vim.lsp.buf.signature_help, "Signature Help" },
-		["[d"] = { vim.diagnostic.goto_prev, "Go to Next Diagnostic" },
-		["]d"] = { vim.diagnostic.goto_next, "Go to Previous Diagnostic" },
-		["<leader>"] = {
-			ca = { vim.lsp.buf.code_action, "Code Action" },
-			rn = { vim.lsp.buf.rename, "Rename Symbol" },
-			lf = { "<cmd>Telescope lsp_document_symbols symbols=function<CR>", "LSP document functions" },
-			lr = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename via LSP" },
-			si = { "<cmd>Telescope lsp_document_symbols<CR>", "LSP document symbols" },
-		},
-	}, { buffer = bufnr })
+    wk.register({
+        g = {
+            d = { vim.lsp.buf.definition, "Definition" },
+            D = { vim.lsp.buf.declaration, "Declaration" },
+            i = { vim.lsp.buf.implementation, "Go to Implementation" },
+            l = { vim.diagnostic.open_float, "Open Diagnostic Float" },
+            r = { vim.lsp.buf.references, "Symbol References" },
+        },
+        K = { vim.lsp.buf.hover, "LSP Hover" },
+        ["<C-k>"] = { vim.lsp.buf.signature_help, "Signature Help" },
+        ["[d"] = { vim.diagnostic.goto_prev, "Go to Next Diagnostic" },
+        ["]d"] = { vim.diagnostic.goto_next, "Go to Previous Diagnostic" },
+        ["<leader>"] = {
+            ca = { vim.lsp.buf.code_action, "Code Action" },
+            rn = { vim.lsp.buf.rename, "Rename Symbol" },
+            lf = { "<cmd>Telescope lsp_document_symbols symbols=function<CR>", "LSP document functions" },
+            lr = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename via LSP" },
+            si = { "<cmd>Telescope lsp_document_symbols<CR>", "LSP document symbols" },
+        },
+    }, { buffer = bufnr })
 end
 ---- }}}
 
@@ -344,39 +344,39 @@ end
 local augroup = api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
 null_ls.setup({
-	sources = {
-		-- Elixir
-		null_ls.builtins.diagnostics.credo,
-		null_ls.builtins.formatting.mix,
-		-- Git
-		null_ls.builtins.code_actions.gitsigns,
-		-- Lua
-		null_ls.builtins.formatting.stylua,
-		-- Nix
-		null_ls.builtins.code_actions.statix,
-		null_ls.builtins.diagnostics.statix,
-		null_ls.builtins.formatting.alejandra,
-	},
+    sources = {
+        -- Elixir
+        null_ls.builtins.diagnostics.credo,
+        null_ls.builtins.formatting.mix,
+        -- Git
+        null_ls.builtins.code_actions.gitsigns,
+        -- Lua
+        null_ls.builtins.formatting.stylua,
+        -- Nix
+        null_ls.builtins.code_actions.statix,
+        null_ls.builtins.diagnostics.statix,
+        null_ls.builtins.formatting.alejandra,
+    },
 
-	on_attach = function(client, bufnr)
-		on_attach_keymaps(client, bufnr)
+    on_attach = function(client, bufnr)
+        on_attach_keymaps(client, bufnr)
 
-		if client.supports_method("textDocument/formatting") then
-			api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					vim.lsp.buf.format({
-						bufnr = bufnr,
-						filter = function(this_client)
-							return this_client.name ~= "rnix"
-						end,
-					})
-				end,
-			})
-		end
-	end,
+        if client.supports_method("textDocument/formatting") then
+            api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            api.nvim_create_autocmd("BufWritePre", {
+                group = augroup,
+                buffer = bufnr,
+                callback = function()
+                    vim.lsp.buf.format({
+                        bufnr = bufnr,
+                        filter = function(this_client)
+                            return this_client.name ~= "rnix"
+                        end,
+                    })
+                end,
+            })
+        end
+    end,
 })
 ---- }}}
 
@@ -385,14 +385,14 @@ null_ls.setup({
 ---- Syntax highlighting {{{
 
 require("nvim-treesitter.configs").setup({
-	auto_install = false,
-	highlight = {
-		enable = true,
-		disable = {},
-		additional_vim_regex_highlighting = false,
-	},
-	incremental_selection = { enable = true },
-	textobjects = { enable = true },
+    auto_install = false,
+    highlight = {
+        enable = true,
+        disable = {},
+        additional_vim_regex_highlighting = false,
+    },
+    incremental_selection = { enable = true },
+    textobjects = { enable = true },
 })
 
 ---- }}}
@@ -410,22 +410,22 @@ o.splitright = true
 local timeout_augroup = api.nvim_create_augroup("LspTimeout", { clear = true })
 
 local function delete_empty_lsp_clients()
-	local clients = vim.lsp.get_active_clients()
-	for _, client in ipairs(clients) do
-		local bufs = vim.lsp.get_buffers_by_client_id(client.id)
-		if #bufs == 0 then
-			print("stopping LSP client " .. client.name)
-			client:stop()
-		end
-	end
+    local clients = vim.lsp.get_active_clients()
+    for _, client in ipairs(clients) do
+        local bufs = vim.lsp.get_buffers_by_client_id(client.id)
+        if #bufs == 0 then
+            print("stopping LSP client " .. client.name)
+            client:stop()
+        end
+    end
 end
 
 api.nvim_create_autocmd("BufDelete", {
-	group = timeout_augroup,
-	pattern = "*",
-	callback = function()
-		vim.defer_fn(delete_empty_lsp_clients, 5000)
-	end,
+    group = timeout_augroup,
+    pattern = "*",
+    callback = function()
+        vim.defer_fn(delete_empty_lsp_clients, 5000)
+    end,
 })
 
 ---- }}}
@@ -435,7 +435,7 @@ api.nvim_create_autocmd("BufDelete", {
 -- Elixir {{{
 
 require("elixir").setup({
-	cmd = { "elixir-ls" },
+    cmd = { "elixir-ls" },
 })
 
 -- }}}
@@ -446,10 +446,10 @@ local luadev = require("lua-dev").setup({})
 lspconfig.sumneko_lua.setup(luadev)
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = "lua",
-	callback = function()
-		vim.bo.expandtab = false
-	end,
+    pattern = "lua",
+    callback = function()
+        vim.bo.expandtab = false
+    end,
 })
 
 -- }}}
