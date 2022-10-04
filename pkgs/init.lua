@@ -114,6 +114,28 @@ cmp.setup({
     },
 })
 
+---- Command line {{{
+
+cmp.setup.cmdline(":", {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+        { name = "path" },
+    }, {
+        { name = "cmdline" },
+    }),
+})
+
+for _, key in ipairs({ "/", "?" }) do
+    cmp.setup.cmdline(key, {
+        sources = {
+            { name = "nvim_lsp_document_symbol" },
+            { name = "buffer" },
+        },
+    })
+end
+
+---- }}}
+
 ---- }}}
 
 ---- }}}
