@@ -465,7 +465,7 @@ lspconfig.sumneko_lua.setup(luadev)
 
 -- Nix {{{
 
-lspconfig.rnix.setup({})
+lspconfig.nil_ls.setup({})
 
 -- }}}
 

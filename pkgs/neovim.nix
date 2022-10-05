@@ -14,7 +14,7 @@
   statix,
   stylua,
   # LSP Servers
-  rnix-lsp,
+  nil,
   sumneko-lua-language-server,
   # Plugins
   elixir-nvim,
@@ -136,6 +136,6 @@ in
           "--suffix"
           "PATH"
           ":"
-          (lib.makeBinPath [alejandra rnix-lsp statix stylua sumneko-lua-language-server])
+          (lib.makeBinPath [alejandra nil statix stylua sumneko-lua-language-server])
         ];
     })

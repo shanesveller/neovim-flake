@@ -42,7 +42,7 @@
           settings = {statix.ignore = [".direnv/*"];};
         };
         devShells.default = let
-          lspServers = with pkgs; [rnix-lsp sumneko-lua-language-server];
+          lspServers = with pkgs; [nil sumneko-lua-language-server];
           linters = with inputs'.pre-commit-hooks.packages; [alejandra nix-linter pre-commit statix stylua];
           local = with config.packages; [nvfetcher];
           utilities = with pkgs; [just nix-tree];
