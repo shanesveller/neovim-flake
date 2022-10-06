@@ -11,9 +11,12 @@
 
   sources' = callPackage ./generated.nix {};
 in
-  builtins.mapAttrs (pname: generated:
-    buildVimPluginFrom2Nix generated
-    // {
-      dependencies = dependencies.${pname} or [];
-    })
+  builtins.mapAttrs (
+    pname: generated:
+      buildVimPluginFrom2Nix
+      (generated
+        // {
+          dependencies = dependencies.${pname} or [];
+        })
+  )
   sources'
