@@ -64,6 +64,19 @@ require("lualine").setup({
     options = {
         theme = "base16",
     },
+    sections = {
+        lualine_c = {
+            "filename",
+            {
+                "lsp_progress",
+                display_components = {
+                    "lsp_client_name",
+                    "spinner",
+                    "percentage",
+                },
+            },
+        },
+    },
 })
 
 ---- }}}
@@ -472,8 +485,6 @@ null_ls.setup({
     end,
 })
 ---- }}}
-
-require("fidget").setup({})
 
 ---- }}}
 

@@ -82,6 +82,7 @@
       # Ad-hoc package management
       packer-nvim
       # Appearance
+      lualine-lsp-progress
       lualine-nvim
       nvim-base16
       # Completion
@@ -116,7 +117,6 @@
       neorg
       neorg-telescope
       # LSP
-      fidget-nvim
       lspkind-nvim
       lua-dev-nvim
       null-ls-nvim
