@@ -3,9 +3,12 @@
     lib,
     pkgs,
     ...
-  }: {
-    packages = pkgs.callPackages ../grammars {
+  }: let
+    grammars = pkgs.callPackages ../grammars {
       inherit inputs lib pkgs;
     };
+  in {
+    legacyPackages = {inherit grammars;};
+    packages = builtins.removeAttrs grammars ["override" "overrideDerivation"];
   };
 }
