@@ -3,6 +3,9 @@ default: run
 build:
 	nix -vL build .#neovimConfigured
 
+changelog:
+  clog --from main -i /dev/null -o CHANGELOG.md
+
 fetch-grammar mask=".":
   cd grammars && nvfetcher -vt -f '{{ mask }}' -c sources.toml -o .
   alejandra --quiet grammars/generated.nix
