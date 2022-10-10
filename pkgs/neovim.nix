@@ -80,6 +80,7 @@
         ]));
     in [
       # Ad-hoc package management
+      impatient-nvim
       packer-nvim
       # Appearance
       lualine-lsp-progress
