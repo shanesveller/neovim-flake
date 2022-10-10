@@ -17,13 +17,13 @@
   };
   neorg = {
     pname = "neorg";
-    version = "c5345e72ebdd84585eec6272755aa26233431317";
+    version = "9a9891a3247b2c15b752efca749f1175b9013235";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "neorg";
-      rev = "c5345e72ebdd84585eec6272755aa26233431317";
+      rev = "9a9891a3247b2c15b752efca749f1175b9013235";
       fetchSubmodules = false;
-      sha256 = "sha256-xfaGcjXyFoFMMKFuFUpbHIqfMnbj+2Bjbm7DHoJ/4kY=";
+      sha256 = "sha256-XPY14g04N+Swa82fz3DNYIkfJXONpLbjH8LR4t5eMQY=";
     };
   };
   neorg-telescope = {
