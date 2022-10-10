@@ -10,8 +10,7 @@
 in
   builtins.mapAttrs (
     pname: generated:
-      callPackage
-      grammarSrc {} {
+      (callPackage grammarSrc {}) {
         language = builtins.replaceStrings ["tree-sitter-"] [""] generated.pname;
         inherit (generated) version;
         source = generated.src;
