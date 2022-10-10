@@ -69,11 +69,11 @@
             "name": null,
             "owner": "nvim-neorg",
             "repo": "tree-sitter-norg-meta",
-            "rev": "4687b53e656b920cde6c0b9a7b9acf9a665cd838",
-            "sha256": "sha256-+NInywA8KOfAVnetuRW/9GJIqFWijrMr23dhZx4b6EQ=",
+            "rev": "e93dcbc56a472649547cfc288f10ae4a93ef8795",
+            "sha256": "sha256-qzMrkefM+K3IJNyruKnynrqlZ0ebMAX2kZHVj0zwjP8=",
             "type": "github"
         },
-        "version": "4687b53e656b920cde6c0b9a7b9acf9a665cd838"
+        "version": "e93dcbc56a472649547cfc288f10ae4a93ef8795"
     },
     "tree-sitter-norg-table": {
         "cargoLocks": null,
