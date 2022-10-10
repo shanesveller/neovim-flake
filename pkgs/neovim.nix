@@ -26,6 +26,7 @@
     withRuby = false;
 
     customRC = ''
+      set rtp^=${../rtp}
       luafile ${./init.lua}
     '';
 
