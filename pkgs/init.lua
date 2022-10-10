@@ -425,6 +425,14 @@ wk.register({
         },
         l = {
             name = "LSP",
+            d = {
+                function()
+                    for _, client in ipairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
+                        vim.lsp.buf_detach_client(0, client.id)
+                    end
+                end,
+                "Detach",
+            },
             i = { "<cmd>LspInfo<CR>", "Info" },
             L = { "<cmd>LspLog<CR>", "Log" },
             R = { "<cmd>LspRestart<CR>", "Restart" },
