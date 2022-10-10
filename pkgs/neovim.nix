@@ -16,12 +16,8 @@
   # LSP Servers
   nil,
   sumneko-lua-language-server,
-  # Plugins
-  tree-sitter-eex,
-  tree-sitter-just,
-  tree-sitter-norg,
-  tree-sitter-norg-meta,
-  tree-sitter-norg-table,
+  # Flake-local
+  grammars,
 }: let
   config = neovimUtils.makeNeovimConfig {
     extraLuaPackages = luaPackages: [];
@@ -41,12 +37,11 @@
 
     plugins = with vimPlugins; let
       nvim-treesitter' = nvim-treesitter.withPlugins (p:
-        with p; [
+        (with p; [
           tree-sitter-bash
           tree-sitter-css
           tree-sitter-dockerfile
           tree-sitter-dot
-          tree-sitter-eex
           tree-sitter-elisp
           tree-sitter-elixir
           tree-sitter-embedded-template
@@ -59,16 +54,12 @@
           tree-sitter-html
           tree-sitter-javascript
           tree-sitter-json
-          tree-sitter-just
           tree-sitter-latex
           tree-sitter-lua
           tree-sitter-make
           tree-sitter-markdown
           tree-sitter-markdown-inline
           tree-sitter-nix
-          tree-sitter-norg
-          tree-sitter-norg-meta
-          tree-sitter-norg-table
           tree-sitter-regex
           tree-sitter-ruby
           tree-sitter-rust
@@ -79,7 +70,14 @@
           tree-sitter-typescript
           tree-sitter-vim
           tree-sitter-yaml
-        ]);
+        ])
+        ++ (with grammars; [
+          tree-sitter-eex
+          tree-sitter-just
+          tree-sitter-norg
+          tree-sitter-norg-meta
+          tree-sitter-norg-table
+        ]));
     in [
       # Ad-hoc package management
       packer-nvim
