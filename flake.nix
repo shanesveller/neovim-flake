@@ -22,6 +22,9 @@
   }:
     flake-parts.lib.mkFlake {inherit self;} {
       imports = [
+        # Order-sensitive
+        ./parts/overlays.nix
+        # Order-insensitive
         ./parts/checks.nix
         ./parts/devshell.nix
         ./parts/grammars.nix

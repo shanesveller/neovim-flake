@@ -17,16 +17,11 @@
   nil,
   sumneko-lua-language-server,
   # Plugins
-  elixir-nvim,
-  neorg,
-  neorg-telescope,
-  pretty-fold-nvim,
   tree-sitter-eex,
   tree-sitter-just,
   tree-sitter-norg,
   tree-sitter-norg-meta,
   tree-sitter-norg-table,
-  vim-just,
 }: let
   config = neovimUtils.makeNeovimConfig {
     extraLuaPackages = luaPackages: [];

@@ -13,16 +13,11 @@ _: {
         neovim-unwrapped = neovim;
         inherit
           (config.packages)
-          elixir-nvim
-          neorg
-          neorg-telescope
-          pretty-fold-nvim
           tree-sitter-eex
           tree-sitter-just
           tree-sitter-norg
           tree-sitter-norg-meta
           tree-sitter-norg-table
-          vim-just
           ;
       };
     };
