@@ -404,6 +404,16 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
         require("neorg").setup({
             load = {
                 ["core.defaults"] = {},
+                ["core.export"] = {},
+                ["core.export.markdown"] = {
+                    config = {
+                        extensions = { "metadata" },
+                        metadata = {
+                            start = "<!--",
+                            ["end"] = "-->",
+                        },
+                    },
+                },
                 ["core.integrations.telescope"] = {},
                 ["core.integrations.treesitter"] = {
                     config = {
