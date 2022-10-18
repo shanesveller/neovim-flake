@@ -4,7 +4,7 @@ build:
 	nix -vL build .#neovimConfigured
 
 changelog:
-  clog --from main -i /dev/null -o CHANGELOG.md
+  clog -i CHANGELOG.md -o CHANGELOG.md -F --setversion Unreleased
 
 fetch-grammar mask=".":
   cd grammars && nvfetcher -vt -f '{{ mask }}' -c sources.toml -o .
