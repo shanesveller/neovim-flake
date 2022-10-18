@@ -6,24 +6,24 @@
 }: {
   elixir-nvim = {
     pname = "elixir-nvim";
-    version = "06614fa79ae2b914ded09e72f5574df1fc1024b4";
+    version = "62a312ef130bd22e99686dc5e10bb6a677a4d9bd";
     src = fetchFromGitHub {
       owner = "mhanberg";
       repo = "elixir.nvim";
-      rev = "06614fa79ae2b914ded09e72f5574df1fc1024b4";
+      rev = "62a312ef130bd22e99686dc5e10bb6a677a4d9bd";
       fetchSubmodules = false;
-      sha256 = "sha256-uWTvfMBKJs2DvknOqKaOYKHBgCZZ+mb93WrSfpZZ7Vs=";
+      sha256 = "sha256-2UVJ8pyhu42UzGvwD/WSjOwhYYYgGl4ttj2D9F1qA90=";
     };
   };
   neorg = {
     pname = "neorg";
-    version = "9a9891a3247b2c15b752efca749f1175b9013235";
+    version = "49d0b5a3acf94f349a7351042d42933bf1047ad5";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "neorg";
-      rev = "9a9891a3247b2c15b752efca749f1175b9013235";
+      rev = "49d0b5a3acf94f349a7351042d42933bf1047ad5";
       fetchSubmodules = false;
-      sha256 = "sha256-XPY14g04N+Swa82fz3DNYIkfJXONpLbjH8LR4t5eMQY=";
+      sha256 = "sha256-j7C8/Zz/UzjwvPbFzYnoeAnnhZPVuKGGIC2h6rYs/Kg=";
     };
   };
   neorg-telescope = {
