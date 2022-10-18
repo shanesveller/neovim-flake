@@ -28,24 +28,24 @@
   };
   tree-sitter-norg = {
     pname = "tree-sitter-norg";
-    version = "5d9c76b5c9927955f7c5d5d946397584e307f69f";
+    version = "dfac5ad2740a79b18ae849590a924e7bad3f1b23";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "tree-sitter-norg";
-      rev = "5d9c76b5c9927955f7c5d5d946397584e307f69f";
+      rev = "dfac5ad2740a79b18ae849590a924e7bad3f1b23";
       fetchSubmodules = false;
-      sha256 = "sha256-x19Db6oVAJyNqtj0yMG9HAjzJrPuy52xp5k17r4j924=";
+      sha256 = "sha256-nH9Y2mYXRehqvq0kp1DkoI2dIAaCidFAxlKos8wZmks=";
     };
   };
   tree-sitter-norg-meta = {
     pname = "tree-sitter-norg-meta";
-    version = "e93dcbc56a472649547cfc288f10ae4a93ef8795";
+    version = "8e1a9008eb9492e95eb9a65ab0ec0419cfa9c4c7";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "tree-sitter-norg-meta";
-      rev = "e93dcbc56a472649547cfc288f10ae4a93ef8795";
+      rev = "8e1a9008eb9492e95eb9a65ab0ec0419cfa9c4c7";
       fetchSubmodules = false;
-      sha256 = "sha256-qzMrkefM+K3IJNyruKnynrqlZ0ebMAX2kZHVj0zwjP8=";
+      sha256 = "sha256-1gOTQdqB/TpaJ2ClNY+/Gqsj7TkCgv9CNiX97oF8PGo=";
     };
   };
   tree-sitter-norg-table = {
