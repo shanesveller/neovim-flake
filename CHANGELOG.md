@@ -1,15 +1,6 @@
-<a name=""></a>
-##  (2022-10-10)
+<a name="2022-10-10"></a>
+## 2022-10-10 (2022-10-18)
 
-
-#### Bug Fixes
-
-* **editing:**  Leave Lua tabs as tabs for stylua ([32030eda](32030eda))
-* **keybinds:**  Use correct command to unconditionally revert buffer ([9c18ad48](9c18ad48))
-* **lsp:**  Don't set paths to LSP binaries inside config ([ae18e376](ae18e376))
-* **workspace:**
-  *  Disambiguate Nix function call syntax ([9e175e09](9e175e09))
-  *  Use proper flake-parts URL instead of registry entry ([ef6873b0](ef6873b0))
 
 #### Features
 
@@ -88,6 +79,7 @@
   *  Generate Nix fetchers for plugins ([f4a641ad](f4a641ad))
   *  Install vim-projectionist ([ff9fdd0e](ff9fdd0e))
 * **workspace:**
+  *  Add Just target to regenerate changelog ([4a431513](4a431513))
   *  Add just targets to run nvfetcher ([103bb2b9](103bb2b9))
   *  Pass in grammars via legacyPackages ([99115f91](99115f91))
   *  Use overlay and extend to provide local vimPlugins ([28555f1d](28555f1d))
@@ -99,6 +91,15 @@
   *  Expose local package for Neovim nightly ([9474d2e9](9474d2e9))
   *  Add flake input for Neovim upstream ([84a0ad42](84a0ad42))
   *  Create empty flake with flake-parts ([4c45e89f](4c45e89f))
+
+#### Bug Fixes
+
+* **editing:**  Leave Lua tabs as tabs for stylua ([32030eda](32030eda))
+* **keybinds:**  Use correct command to unconditionally revert buffer ([9c18ad48](9c18ad48))
+* **lsp:**  Don't set paths to LSP binaries inside config ([ae18e376](ae18e376))
+* **workspace:**
+  *  Disambiguate Nix function call syntax ([9e175e09](9e175e09))
+  *  Use proper flake-parts URL instead of registry entry ([ef6873b0](ef6873b0))
 
 
 
