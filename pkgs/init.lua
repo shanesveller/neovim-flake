@@ -558,8 +558,16 @@ require("elixir").setup({
 
 -- Lua {{{
 
-local luadev = require("lua-dev").setup({})
-lspconfig.sumneko_lua.setup(luadev)
+require("neodev").setup({})
+lspconfig.sumneko_lua.setup({
+    settings = {
+        Lua = {
+            completion = {
+                callSnippet = "Replace",
+            },
+        },
+    },
+})
 
 -- }}}
 

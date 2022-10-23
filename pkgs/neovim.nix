@@ -118,7 +118,7 @@
       neorg-telescope
       # LSP
       lspkind-nvim
-      lua-dev-nvim
+      neodev-nvim
       null-ls-nvim
       nvim-lspconfig
       # Syntax highlighting
