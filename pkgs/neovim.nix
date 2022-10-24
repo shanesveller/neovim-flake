@@ -109,6 +109,7 @@
       nvim-tree-lua
       nvim-web-devicons
       # Git
+      diffview-nvim
       fugitive
       gitsigns-nvim
       # Keybinds

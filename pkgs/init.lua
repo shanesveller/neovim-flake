@@ -283,6 +283,7 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
             vim.api.nvim_del_augroup_by_name("GitSignsLazyLoad")
             vim.schedule(function()
                 require("gitsigns").setup({})
+                require("diffview").setup({})
             end)
         end
     end,
