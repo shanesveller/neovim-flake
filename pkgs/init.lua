@@ -519,6 +519,13 @@ require("nvim-treesitter.configs").setup({
 o.splitbelow = true
 o.splitright = true
 
+-- Rebalance windows whenever Tmux/terminal resizes
+api.nvim_create_autocmd("VimResized", {
+    group = api.nvim_create_augroup("Window Rebalance", { clear = true }),
+    pattern = "*",
+    command = "wincmd =",
+})
+
 ---- }}}
 
 ---- Local {{{
