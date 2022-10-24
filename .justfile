@@ -17,7 +17,7 @@ fetch-plugin mask=".":
 readme:
   nix -vL run ~/src/neovim-flake#neovimConfigured -- README.norg +"Neorg export to-file README.md"
 
-run args="":
+run *args:
 	nix -vL run .#neovimConfigured -- {{ args }}
 
 profile:
