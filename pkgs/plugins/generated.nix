@@ -6,24 +6,24 @@
 }: {
   elixir-nvim = {
     pname = "elixir-nvim";
-    version = "62a312ef130bd22e99686dc5e10bb6a677a4d9bd";
+    version = "80ee7b3e24740cf70629d74b9f812b6c502131a6";
     src = fetchFromGitHub {
       owner = "mhanberg";
       repo = "elixir.nvim";
-      rev = "62a312ef130bd22e99686dc5e10bb6a677a4d9bd";
+      rev = "80ee7b3e24740cf70629d74b9f812b6c502131a6";
       fetchSubmodules = false;
-      sha256 = "sha256-2UVJ8pyhu42UzGvwD/WSjOwhYYYgGl4ttj2D9F1qA90=";
+      sha256 = "sha256-2P6RmH+ymGWDS9dLdiq8tHHep0DgdAbAg2ofC21gtns=";
     };
   };
   neorg = {
     pname = "neorg";
-    version = "49d0b5a3acf94f349a7351042d42933bf1047ad5";
+    version = "aff734c00f2536b0f862643ca048d1c635e2ab22";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "neorg";
-      rev = "49d0b5a3acf94f349a7351042d42933bf1047ad5";
+      rev = "aff734c00f2536b0f862643ca048d1c635e2ab22";
       fetchSubmodules = false;
-      sha256 = "sha256-j7C8/Zz/UzjwvPbFzYnoeAnnhZPVuKGGIC2h6rYs/Kg=";
+      sha256 = "sha256-FVyb+ngBLPHJReCoFRlqUMmbajLvU739ehQqhPtGV8w=";
     };
   };
   neorg-telescope = {
@@ -39,13 +39,13 @@
   };
   other-nvim = {
     pname = "other-nvim";
-    version = "a2ae9e03d08c6c5e8f60cc1db58cbf4ada2ae338";
+    version = "25bbed8223a8c907a95c4da52204d72ef5a3092a";
     src = fetchFromGitHub {
       owner = "rgroli";
       repo = "other.nvim";
-      rev = "a2ae9e03d08c6c5e8f60cc1db58cbf4ada2ae338";
+      rev = "25bbed8223a8c907a95c4da52204d72ef5a3092a";
       fetchSubmodules = false;
-      sha256 = "sha256-knAHH4cxCxBTCZb54BERyR3l6+uhzZ3k9yPSzAl/4W0=";
+      sha256 = "sha256-6/Iywl8ZmLqlS2/B5ky6lBLS/BEwPC/S51LtpvZYWH8=";
     };
   };
   pretty-fold-nvim = {
@@ -61,13 +61,13 @@
   };
   vim-just = {
     pname = "vim-just";
-    version = "312615d5b4c4aa2595d697faca5af345ba8fe102";
+    version = "838c9096d4c5d64d1000a6442a358746324c2123";
     src = fetchFromGitHub {
       owner = "NoahTheDuke";
       repo = "vim-just";
-      rev = "312615d5b4c4aa2595d697faca5af345ba8fe102";
+      rev = "838c9096d4c5d64d1000a6442a358746324c2123";
       fetchSubmodules = false;
-      sha256 = "sha256-8qGFYRoVIiGB240wdM0o9hCMt65Gg4qIh7pvmW3DghU=";
+      sha256 = "sha256-DSC47z2wOEXvo2kGO5JtmR3hyHPiYXrkX7MgtagV5h4=";
     };
   };
 }
