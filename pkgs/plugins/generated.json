@@ -12,11 +12,11 @@
             "name": null,
             "owner": "mhanberg",
             "repo": "elixir.nvim",
-            "rev": "80ee7b3e24740cf70629d74b9f812b6c502131a6",
-            "sha256": "sha256-2P6RmH+ymGWDS9dLdiq8tHHep0DgdAbAg2ofC21gtns=",
+            "rev": "9edb86abf7a38cb5305163872e326c3d4c3866d7",
+            "sha256": "sha256-MW7gmf33u7AuBdI3DFzYatdSs8FVdPcTYfyiPJclNlw=",
             "type": "github"
         },
-        "version": "80ee7b3e24740cf70629d74b9f812b6c502131a6"
+        "version": "9edb86abf7a38cb5305163872e326c3d4c3866d7"
     },
     "neorg": {
         "cargoLocks": null,
@@ -31,11 +31,11 @@
             "name": null,
             "owner": "nvim-neorg",
             "repo": "neorg",
-            "rev": "aff734c00f2536b0f862643ca048d1c635e2ab22",
-            "sha256": "sha256-FVyb+ngBLPHJReCoFRlqUMmbajLvU739ehQqhPtGV8w=",
+            "rev": "cea50b7cf3ea3a8c6dc33881420cbe9926b26490",
+            "sha256": "sha256-LYJQfYmPhQ8uQNROzadU5/ALkTa1ZATJJm7oGJ4V/Nw=",
             "type": "github"
         },
-        "version": "aff734c00f2536b0f862643ca048d1c635e2ab22"
+        "version": "cea50b7cf3ea3a8c6dc33881420cbe9926b26490"
     },
     "neorg-telescope": {
         "cargoLocks": null,
