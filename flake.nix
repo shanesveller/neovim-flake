@@ -14,7 +14,7 @@
     pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     flake-parts,
     ...
@@ -29,6 +29,8 @@
         ./parts/grammars.nix
         ./parts/neovim.nix
         ./parts/plugins.nix
+        # Third-party
+        inputs.pre-commit-hooks.flakeModule
       ];
       systems = ["aarch64-darwin" "x86_64-darwin" "x86_64-linux"];
     };

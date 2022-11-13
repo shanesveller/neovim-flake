@@ -16,7 +16,7 @@
     in
       pkgs.mkShell {
         packages = utilities ++ local ++ linters ++ lspServers;
-        inherit (config.checks.pre-commit-check) shellHook;
+        shellHook = config.pre-commit.installationScript;
       };
 
     packages.nvfetcher = pkgs.symlinkJoin {
