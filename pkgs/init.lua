@@ -60,6 +60,8 @@ o.laststatus = 3
 
 vim.cmd.colorscheme("base16-tomorrow-night")
 
+require("todo-comments").setup({})
+
 ---- Statusline {{{
 
 local navic = require("nvim-navic")

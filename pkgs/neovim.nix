@@ -85,6 +85,7 @@
       lualine-lsp-progress
       lualine-nvim
       nvim-base16
+      todo-comments-nvim
       # Completion
       cmp-buffer
       cmp-cmdline
