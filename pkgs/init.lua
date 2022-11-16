@@ -225,6 +225,15 @@ end)
 
 ---- }}}
 
+---- Configuration {{{
+require("neoconf").setup({
+    import = {
+        vscode = false,
+        coc = false,
+    },
+})
+---- Configuration }}}
+
 ---- Editing {{{
 
 -- Access system clipboard

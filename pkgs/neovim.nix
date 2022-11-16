@@ -132,6 +132,7 @@
       vim-just
       # Utility
       mini-nvim
+      neoconf
       # Workflow
       auto-session
       vim-projectionist
