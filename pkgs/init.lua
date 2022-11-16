@@ -65,6 +65,7 @@ vim.cmd.colorscheme("base16-tomorrow-night")
 local navic = require("nvim-navic")
 
 require("lualine").setup({
+    extensions = { "fugitive", "nvim-tree", "quickfix" },
     options = {
         theme = "base16",
     },
