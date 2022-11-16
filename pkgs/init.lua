@@ -267,6 +267,7 @@ local nvim_tree_lazy = function()
     require("nvim-web-devicons").setup({})
     require("nvim-tree").setup({})
     vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim tree" })
+    vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFindFile<CR>", { desc = "Open nvim tree to current file" })
     vim.cmd("NvimTreeToggle")
 end
 
