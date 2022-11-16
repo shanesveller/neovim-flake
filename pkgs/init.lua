@@ -586,6 +586,19 @@ api.nvim_create_autocmd("VimResized", {
 
 ---- }}}
 
+---- Workflow {{{
+
+local session_dir = vim.fn.stdpath("data") .. "/session"
+if vim.fn.isdirectory(session_dir) == 0 then
+    vim.fn.mkdir(session_dir)
+end
+
+require("mini.sessions").setup({
+    directory = session_dir,
+})
+
+---- Workflow }}}
+
 ---- Local {{{
 
 -- Time out disconnected, empty LSP clients
