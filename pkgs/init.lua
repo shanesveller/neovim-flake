@@ -227,6 +227,7 @@ require("Comment").setup({})
 
 -- -- Fold using tree-sitter grammar
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
+-- o.foldlevelstart = 20
 -- o.foldlevel = 20
 -- o.foldmethod = "expr"
 
