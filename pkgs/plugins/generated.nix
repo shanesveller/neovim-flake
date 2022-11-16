@@ -15,6 +15,17 @@
       sha256 = "sha256-+sSoIKSSUD+ypDjPOn3dN5kG/IBACMOicF23nlBsO5I=";
     };
   };
+  neoconf = {
+    pname = "neoconf";
+    version = "681e89d58d46a7c63ee091fee32220373dda1072";
+    src = fetchFromGitHub {
+      owner = "folke";
+      repo = "neoconf.nvim";
+      rev = "681e89d58d46a7c63ee091fee32220373dda1072";
+      fetchSubmodules = false;
+      sha256 = "sha256-rZVQwj47JsfGfISwR5+OLEuxcohVqvBoYM77lam3EQA=";
+    };
+  };
   neorg = {
     pname = "neorg";
     version = "ad2f5735c837046a40efef9aad70d01af5acd076";
