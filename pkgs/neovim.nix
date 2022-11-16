@@ -124,6 +124,7 @@
       neodev-nvim
       null-ls-nvim
       nvim-lspconfig
+      nvim-navic
       # Syntax highlighting
       nvim-treesitter'
       vim-just

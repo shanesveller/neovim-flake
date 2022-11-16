@@ -60,6 +60,10 @@ o.laststatus = 3
 
 vim.cmd.colorscheme("base16-tomorrow-night")
 
+---- Statusline {{{
+
+local navic = require("nvim-navic")
+
 require("lualine").setup({
     options = {
         theme = "base16",
@@ -77,7 +81,14 @@ require("lualine").setup({
             },
         },
     },
+    winbar = {
+        lualine_c = {
+            { navic.get_location, cond = navic.is_available },
+        },
+    },
 })
+
+---- Statusline }}}
 
 ---- }}}
 
@@ -530,6 +541,16 @@ null_ls.setup({
 })
 ---- }}}
 
+---- Winbar Context {{{
+
+navic.setup({})
+
+local navic_attach = function(client, bufnr)
+    navic.attach(client, bufnr)
+end
+
+---- Winbar Context }}}
+
 ---- }}}
 
 ---- Syntax highlighting {{{
@@ -594,6 +615,7 @@ api.nvim_create_autocmd("BufDelete", {
 require("elixir").setup({
     capabilities = capabilities,
     cmd = { "elixir-ls" },
+    on_attach = navic_attach,
 })
 
 -- }}}
@@ -603,6 +625,7 @@ require("elixir").setup({
 require("neodev").setup({})
 lspconfig.sumneko_lua.setup({
     capabilities = capabilities,
+    on_attach = navic_attach,
     settings = {
         Lua = {
             completion = {
@@ -618,6 +641,7 @@ lspconfig.sumneko_lua.setup({
 
 lspconfig.nil_ls.setup({
     capabilities = capabilities,
+    on_attach = navic_attach,
 })
 
 -- }}}
@@ -629,6 +653,7 @@ local rt = require("rust-tools")
 rt.setup({
     server = {
         capabilities = capabilities,
+        on_attach = navic_attach,
     },
 })
 
