@@ -13,6 +13,7 @@ _: {
       neovimConfigured = pkgs.callPackage ../pkgs/neovim.nix {
         neovim-unwrapped = neovim;
         inherit (config.legacyPackages) grammars;
+        inherit (pkgs.nodePackages) vscode-langservers-extracted;
       };
     };
   };

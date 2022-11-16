@@ -16,6 +16,7 @@
   # LSP Servers
   nil,
   sumneko-lua-language-server,
+  vscode-langservers-extracted,
   # Flake-local
   grammars,
 }: let
@@ -152,6 +153,13 @@ in
           "--suffix"
           "PATH"
           ":"
-          (lib.makeBinPath [alejandra nil statix stylua sumneko-lua-language-server])
+          (lib.makeBinPath [
+            alejandra
+            nil
+            statix
+            stylua
+            sumneko-lua-language-server
+            vscode-langservers-extracted
+          ])
         ];
     })

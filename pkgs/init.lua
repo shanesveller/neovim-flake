@@ -643,6 +643,13 @@ api.nvim_create_autocmd("BufDelete", {
 
 ---- Languages {{{
 
+-- CSS {{{
+lspconfig.cssls.setup({
+    capabilities = capabilities,
+    on_attach = navic_attach,
+})
+-- }}}
+
 -- Elixir {{{
 
 require("elixir").setup({
@@ -651,6 +658,27 @@ require("elixir").setup({
     on_attach = navic_attach,
 })
 
+-- }}}
+
+-- HTML {{{
+lspconfig.html.setup({
+    capabilities = capabilities,
+    on_attach = navic_attach,
+})
+-- }}}
+
+-- JavaScript/TypeScript {{{
+lspconfig.eslint.setup({
+    capabilities = capabilities,
+    on_attach = navic_attach,
+})
+-- }}}
+
+-- JSON {{{
+lspconfig.jsonls.setup({
+    capabilities = capabilities,
+    on_attach = navic_attach,
+})
 -- }}}
 
 -- Lua {{{
