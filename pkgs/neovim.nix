@@ -132,6 +132,7 @@
       # Utility
       mini-nvim
       # Workflow
+      auto-session
       vim-projectionist
       # Languages
       ## Elixir
