@@ -105,6 +105,7 @@
       # Editing
       comment-nvim
       direnv-vim
+      emmet-vim
       indent-blankline-nvim
       pretty-fold-nvim
       trouble-nvim

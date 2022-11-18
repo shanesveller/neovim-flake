@@ -687,6 +687,7 @@ lspconfig.tailwindcss.setup({
             heex = "html",
         },
         tailwindCSS = {
+            emmetCompletions = true,
             experimental = {
                 classRegex = {
                     [[class= "([^"]*)]],
