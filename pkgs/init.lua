@@ -245,6 +245,11 @@ require("mini.align").setup({})
 -- Color
 require("colorizer").setup({})
 
+require("nvim-highlight-colors").setup({
+    render = "background",
+    enable_tailwind = true,
+})
+
 -- Comments
 require("Comment").setup({})
 

@@ -108,6 +108,7 @@
       emmet-vim
       indent-blankline-nvim
       nvim-colorizer-lua
+      nvim-highlight-colors
       pretty-fold-nvim
       trouble-nvim
       # Finder
