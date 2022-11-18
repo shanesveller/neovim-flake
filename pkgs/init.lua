@@ -755,6 +755,9 @@ lspconfig.sumneko_lua.setup({
             completion = {
                 callSnippet = "Replace",
             },
+            workspace = {
+                checkThirdParty = false,
+            },
         },
     },
 })
