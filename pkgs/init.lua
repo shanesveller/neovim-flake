@@ -648,6 +648,45 @@ lspconfig.cssls.setup({
     capabilities = capabilities,
     on_attach = navic_attach,
 })
+
+lspconfig.tailwindcss.setup({
+    capabilities = capabilities,
+    -- TODO: navic reports error, but seems supported?
+    -- https://github.com/tailwindlabs/tailwindcss-intellisense/blob/8fce24db9c480a9615e175fb3acaac91f7a0a7c1/packages/tailwindcss-intellisense/src/extension.ts#L168
+    -- on_attach = navic_attach,
+    init_options = {
+        userLanguages = {
+            elixir = "phoenix-heex",
+            heex = "phoenix-heex",
+        },
+    },
+    settings = {
+        -- https://github.com/tailwindlabs/tailwindcss-intellisense/tree/6b3e598e5378812b42db8a208db4980c82b60a10/packages/vscode-tailwindcss#tailwindcssincludelanguages
+        includeLanguages = {
+            ["html-eex"] = "html",
+            ["phoenix-heex"] = "html",
+            eelixir = "html",
+            heex = "html",
+        },
+        tailwindCSS = {
+            experimental = {
+                classRegex = {
+                    [[class= "([^"]*)]],
+                    [[class: "([^"]*)]],
+                    '~H""".*class="([^"]*)".*"""',
+                },
+            },
+            validate = true,
+        },
+    },
+    filetypes = {
+        "css",
+        "elixir",
+        "heex",
+        "html",
+        "html-eex",
+    },
+})
 -- }}}
 
 -- Elixir {{{

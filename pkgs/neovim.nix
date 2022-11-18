@@ -16,6 +16,7 @@
   # LSP Servers
   nil,
   sumneko-lua-language-server,
+  tailwind-intellisense,
   vscode-langservers-extracted,
   # Flake-local
   grammars,
@@ -159,6 +160,7 @@ in
             statix
             stylua
             sumneko-lua-language-server
+            tailwind-intellisense
             vscode-langservers-extracted
           ])
         ];

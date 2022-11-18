@@ -14,6 +14,7 @@ _: {
         neovim-unwrapped = neovim;
         inherit (config.legacyPackages) grammars;
         inherit (pkgs.nodePackages) vscode-langservers-extracted;
+        tailwind-intellisense = pkgs.nodePackages."@tailwindcss/language-server";
       };
     };
   };
