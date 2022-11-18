@@ -296,6 +296,9 @@ o.smartcase = true
 -- Surround
 require("mini.surround").setup({})
 
+-- Trouble
+require("trouble").setup({})
+
 ---- }}}
 
 ---- File Tree {{{
@@ -313,12 +316,18 @@ end
 ---- Finder {{{
 
 local tel = require("telescope")
+local actions = require("telescope.actions")
+local trouble = require("trouble.providers.telescope")
 
 tel.load_extension("fzf")
 tel.load_extension("project")
 
 tel.setup({
     defaults = {
+        mappings = {
+            i = { ["<c-t>"] = trouble.open_with_trouble },
+            n = { ["<c-t>"] = trouble.open_with_trouble },
+        },
         path_display = { shorten = 3 },
         preview = { hide_on_startup = true },
     },
@@ -365,6 +374,7 @@ local wk = require("which-key")
 wk.setup({})
 
 wk.register({
+    gR = { "<cmd>TroubleToggle lsp_references<CR>", "Trouble.nvim LSP Refs" },
     ["<leader>"] = {
         ["'"] = { "<cmd>Telescope resume<CR>", "Resume last search" },
         [","] = { "<cmd>Telescope buffers<CR>", "List buffers" },
@@ -446,6 +456,14 @@ wk.register({
             K = { "<cmd>wincmd K<CR>", "Up" },
             l = { "<cmd>wincmd l<CR>", "Right" },
             L = { "<cmd>wincmd L<CR>", "Right" },
+        },
+        x = {
+            name = "Trouble",
+            d = { "<cmd>TroubleToggle document_diagnostics<CR>", "Trouble.nvim Document Diag" },
+            l = { "<cmd>TroubleToggle loclist<CR>", "Trouble.nvim Loclist" },
+            q = { "<cmd>TroubleToggle quickfix<CR>", "Trouble.nvim Quickfix" },
+            w = { "<cmd>TroubleToggle workspace_diagnostics<CR>", "Trouble.nvim Workspace Diag" },
+            x = { "<cmd>TroubleToggle<CR>", "Toggle Trouble.nvim" },
         },
     },
 })

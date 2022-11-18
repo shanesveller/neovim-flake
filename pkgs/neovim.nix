@@ -107,6 +107,7 @@
       direnv-vim
       indent-blankline-nvim
       pretty-fold-nvim
+      trouble-nvim
       # Finder
       telescope-nvim
       telescope-fzf-native-nvim
