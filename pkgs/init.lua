@@ -717,6 +717,12 @@ lspconfig.eslint.setup({
 lspconfig.jsonls.setup({
     capabilities = capabilities,
     on_attach = navic_attach,
+    settings = {
+        json = {
+            schemas = require("schemastore").json.schemas(),
+            validate = { enable = true },
+        },
+    },
 })
 -- }}}
 

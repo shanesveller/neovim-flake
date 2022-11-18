@@ -129,6 +129,7 @@
       null-ls-nvim
       nvim-lspconfig
       nvim-navic
+      SchemaStore-nvim
       # Syntax highlighting
       nvim-treesitter'
       vim-just
