@@ -107,6 +107,7 @@
       direnv-vim
       emmet-vim
       indent-blankline-nvim
+      nvim-colorizer-lua
       pretty-fold-nvim
       trouble-nvim
       # Finder

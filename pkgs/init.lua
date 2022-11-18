@@ -242,6 +242,9 @@ o.clipboard = "unnamedplus"
 -- Alignment
 require("mini.align").setup({})
 
+-- Color
+require("colorizer").setup({})
+
 -- Comments
 require("Comment").setup({})
 
