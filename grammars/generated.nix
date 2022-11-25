@@ -28,13 +28,13 @@
   };
   tree-sitter-norg = {
     pname = "tree-sitter-norg";
-    version = "dfac5ad2740a79b18ae849590a924e7bad3f1b23";
+    version = "8ad20059c6f128861c4506fff866150ffee1d6f4";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "tree-sitter-norg";
-      rev = "dfac5ad2740a79b18ae849590a924e7bad3f1b23";
+      rev = "8ad20059c6f128861c4506fff866150ffee1d6f4";
       fetchSubmodules = false;
-      sha256 = "sha256-nH9Y2mYXRehqvq0kp1DkoI2dIAaCidFAxlKos8wZmks=";
+      sha256 = "sha256-1cKH3k/nbZhZleINZ91M+glG1m2SlBJR/AP7mz/SAvI=";
     };
   };
   tree-sitter-norg-meta = {
