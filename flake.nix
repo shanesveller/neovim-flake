@@ -20,15 +20,7 @@
   }:
     flake-parts.lib.mkFlake {inherit self;} {
       imports = [
-        # Order-sensitive
-        ./parts/overlays.nix
-        # Order-insensitive
-        ./parts/checks.nix
-        ./parts/devshell.nix
-        ./parts/grammars.nix
-        ./parts/neovim.nix
-        ./parts/plugins.nix
-        # Third-party
+        ./parts/all-parts.nix
         inputs.pre-commit-hooks.flakeModule
       ];
       systems = ["aarch64-darwin" "x86_64-darwin" "x86_64-linux"];
