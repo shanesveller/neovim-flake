@@ -2,10 +2,7 @@
   perSystem = {
     config,
     inputs',
-    lib,
     pkgs,
-    self',
-    system,
     ...
   }: {
     devShells.default = let

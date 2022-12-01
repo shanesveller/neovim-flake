@@ -3,9 +3,9 @@
   self,
   ...
 }: let
-  extendPlugins = final: prev: {
+  extendPlugins = _final: prev: {
     vimPlugins = prev.vimPlugins.extend (
-      f: p:
+      _f: p:
         lib.trivial.pipe self.legacyPackages.${prev.system}.plugins [
           stripOverrides
           (builtins.mapAttrs (n: v:

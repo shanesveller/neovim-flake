@@ -1,14 +1,9 @@
 {
-  fetchFromGitHub,
   lib,
   neovim-unwrapped,
   neovimUtils,
-  runCommand,
-  symlinkJoin,
   vimPlugins,
-  vimUtils,
   wrapNeovimUnstable,
-  writeTextFile,
   # Formatters and Linters
   alejandra,
   statix,
@@ -22,9 +17,6 @@
   grammars,
 }: let
   config = neovimUtils.makeNeovimConfig {
-    extraLuaPackages = luaPackages: [];
-    extraPython3Packages = pythonPackages: [];
-
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;

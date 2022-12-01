@@ -1,9 +1,5 @@
-{inputs, ...}: {
-  perSystem = {
-    config,
-    system,
-    ...
-  }: {
+_: {
+  perSystem = _: {
     pre-commit = {
       settings = {
         hooks = {

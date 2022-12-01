@@ -3,11 +3,7 @@
   self,
   ...
 }: {
-  perSystem = {
-    lib,
-    system,
-    ...
-  }: let
+  perSystem = {system, ...}: let
     pkgs = import inputs.nixpkgs {
       config = {};
       overlays = [self.overlays.extendPlugins];
