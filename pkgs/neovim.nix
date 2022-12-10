@@ -138,6 +138,8 @@
       # Languages
       ## Elixir
       elixir-nvim
+      ## RDF
+      vim-rdf
       ## Rust
       crates-nvim
       rust-tools-nvim
