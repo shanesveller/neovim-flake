@@ -1,1 +1,1 @@
-{"version":1,"ops":[{"type":1,"author":{"id":"a67ebf871bf4aaed7b779ff56b310f45abb37ec0"},"timestamp":1670684815,"title":"Tracking issue: Muscle memory hiccups","message":"","files":null}]}
+{"version":1,"ops":[{"type":3,"author":{"id":"a67ebf871bf4aaed7b779ff56b310f45abb37ec0"},"timestamp":1670684851,"message":"- Missing magit analogue: merge-into\n- Missing magit analogue: git-absorb support\n- Missing magit analogue: git-push","files":null}]}
