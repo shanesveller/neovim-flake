@@ -4,8 +4,15 @@ local api = vim.api
 local g = vim.g
 local o = vim.opt
 
--- require("impatient").enable_profile()
-require("impatient")
+---- Impatient {{{
+
+if vim.env.IMPATIENT_PROFILE ~= nil then
+    require("impatient").enable_profile()
+else
+    require("impatient")
+end
+
+---- Impatient }}}
 
 ---- Disable builtins {{{
 
