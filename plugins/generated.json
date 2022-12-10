@@ -131,5 +131,24 @@
             "type": "github"
         },
         "version": "838c9096d4c5d64d1000a6442a358746324c2123"
+    },
+    "vim-rdf": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "vim-rdf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "niklasl",
+            "repo": "vim-rdf",
+            "rev": "e2af9a7614a9fb9c3fc419135d41700426cad0db",
+            "sha256": "sha256-qpuF4vSU0VaQrcrYgksYb6z2oRyXOKirkzAgBCdUomQ=",
+            "type": "github"
+        },
+        "version": "e2af9a7614a9fb9c3fc419135d41700426cad0db"
     }
 }

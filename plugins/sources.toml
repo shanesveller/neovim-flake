@@ -25,3 +25,7 @@ fetch.github = "anuvyklack/pretty-fold.nvim"
 [vim-just]
 src.git = "https://github.com/NoahTheDuke/vim-just.git"
 fetch.github = "NoahTheDuke/vim-just"
+
+[vim-rdf]
+src.git = "https://github.com/niklasl/vim-rdf.git"
+fetch.github = "niklasl/vim-rdf"

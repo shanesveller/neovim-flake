@@ -81,4 +81,15 @@
       sha256 = "sha256-DSC47z2wOEXvo2kGO5JtmR3hyHPiYXrkX7MgtagV5h4=";
     };
   };
+  vim-rdf = {
+    pname = "vim-rdf";
+    version = "e2af9a7614a9fb9c3fc419135d41700426cad0db";
+    src = fetchFromGitHub {
+      owner = "niklasl";
+      repo = "vim-rdf";
+      rev = "e2af9a7614a9fb9c3fc419135d41700426cad0db";
+      fetchSubmodules = false;
+      sha256 = "sha256-qpuF4vSU0VaQrcrYgksYb6z2oRyXOKirkzAgBCdUomQ=";
+    };
+  };
 }
