@@ -11,8 +11,8 @@ fetch-grammar mask=".":
   alejandra --quiet grammars/generated.nix
 
 fetch-plugin mask=".":
-  cd pkgs/plugins && nvfetcher -vt -f '{{ mask }}' -c sources.toml -o .
-  alejandra --quiet pkgs/plugins/generated.nix
+  cd plugins && nvfetcher -vt -f '{{ mask }}' -c sources.toml -o .
+  alejandra --quiet plugins/generated.nix
 
 readme:
   nix -vL run ~/src/neovim-flake#neovimConfigured -- README.norg +"Neorg export to-file README.md"

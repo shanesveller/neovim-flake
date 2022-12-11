@@ -22,7 +22,7 @@ in {
   };
 
   perSystem = {pkgs, ...}: let
-    plugins = pkgs.callPackage ../pkgs/plugins {
+    plugins = pkgs.callPackage ../plugins {
       inherit (pkgs.vimUtils) buildVimPluginFrom2Nix;
     };
   in {
