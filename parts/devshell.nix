@@ -16,6 +16,16 @@
         shellHook = config.pre-commit.installationScript;
       };
 
+    formatter = pkgs.symlinkJoin {
+      name = "alejandra";
+      paths = [pkgs.alejandra];
+      nativeBuildInputs = [pkgs.makeWrapper];
+      postBuild = ''
+        wrapProgram $out/bin/alejandra \
+          --add-flags '--quiet'
+      '';
+    };
+
     packages.nvfetcher = pkgs.symlinkJoin {
       name = "nvfetcher";
       paths = [pkgs.nvfetcher];
