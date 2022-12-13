@@ -17,13 +17,13 @@
   };
   neoconf = {
     pname = "neoconf";
-    version = "7c59fa1292377a43e314d6d493438ff8af8aa853";
+    version = "7b6ec340b347fe560e77db25785ffd0b215ff138";
     src = fetchFromGitHub {
       owner = "folke";
       repo = "neoconf.nvim";
-      rev = "7c59fa1292377a43e314d6d493438ff8af8aa853";
+      rev = "7b6ec340b347fe560e77db25785ffd0b215ff138";
       fetchSubmodules = false;
-      sha256 = "sha256-5lmqyFCabgotvLlscxDX3ozqovGxGNReeRzaez0rllg=";
+      sha256 = "sha256-oXTytW7hwnASeqchx807BtHgldzgcr4Vec/RXdWxGms=";
     };
   };
   neorg = {
