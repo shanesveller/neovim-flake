@@ -1,5 +1,12 @@
 local luasnip = require("luasnip")
 
+local path = vim.fn.stdpath("config") .. "/snippets/"
+
+local load_all = function()
+    -- import friendly-snippets
+    require("luasnip.loaders.from_vscode").lazy_load()
+end
+
 -- Keymaps {{{
 
 vim.keymap.set({ "i", "s" }, "<C-k>", function()
@@ -24,9 +31,14 @@ vim.keymap.set("n", "<leader>os", function()
     require("luasnip.loaders").edit_snippet_files()
 end)
 
+vim.keymap.set("n", "<leader>oS", function()
+    luasnip.cleanup()
+    load_all()
+    vim.notify_once("snippets cleared and reloaded")
+end)
+
 -- Keymaps }}}
 
--- import friendly-snippets
-require("luasnip.loaders.from_vscode").lazy_load()
+load_all()
 
 -- vim: foldmethod=marker
