@@ -778,6 +778,7 @@ lspconfig.sumneko_lua.setup({
             },
             workspace = {
                 checkThirdParty = false,
+                ignoreDir = { ".direnv", "result" },
             },
         },
     },
