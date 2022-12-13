@@ -93,6 +93,7 @@
       cmp-nvim-lua
       cmp-path
       cmp-spell
+      friendly-snippets
       luasnip
       nvim-cmp
       # Editing
