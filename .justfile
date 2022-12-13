@@ -28,7 +28,7 @@ run *args:
 
 profile:
 	truncate -s 0 profile.txt
-	nix -vL run .#neovimConfigured -- --startuptime profile.txt +q
+	env STARTUP_PROFILE=1 nix -vL run .#neovimConfigured -- --startuptime profile.txt +q
 	less profile.txt
 
 tree:

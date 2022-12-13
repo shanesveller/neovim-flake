@@ -9,7 +9,9 @@ local o = vim.opt
 if vim.env.IMPATIENT_PROFILE ~= nil then
     require("impatient").enable_profile()
 else
-    require("impatient")
+    if vim.env.STARTUP_PROFILE == nil then
+        require("impatient")
+    end
 end
 
 ---- Impatient }}}
