@@ -2,6 +2,10 @@
 src.git = "https://github.com/mhanberg/elixir.nvim.git"
 fetch.github = "mhanberg/elixir.nvim"
 
+[LuaSnip-snippets-nvim]
+src.git = "https://github.com/molleweide/LuaSnip-snippets.nvim.git"
+fetch.github = "molleweide/LuaSnip-snippets.nvim"
+
 [neoconf]
 src.git = "https://github.com/folke/neoconf.nvim.git"
 fetch.github = "folke/neoconf.nvim"

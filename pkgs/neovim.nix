@@ -95,6 +95,7 @@
       cmp-spell
       friendly-snippets
       luasnip
+      LuaSnip-snippets-nvim
       nvim-cmp
       # Editing
       comment-nvim

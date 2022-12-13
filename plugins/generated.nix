@@ -4,6 +4,17 @@
   fetchurl,
   fetchFromGitHub,
 }: {
+  LuaSnip-snippets-nvim = {
+    pname = "LuaSnip-snippets-nvim";
+    version = "d7e40e4cce622eab2316607dbcd8d6039bcb9fe0";
+    src = fetchFromGitHub {
+      owner = "molleweide";
+      repo = "LuaSnip-snippets.nvim";
+      rev = "d7e40e4cce622eab2316607dbcd8d6039bcb9fe0";
+      fetchSubmodules = false;
+      sha256 = "sha256-iFpk2dmcdF3krwem0Agl044ML2syw61wWPX7ldz4bhg=";
+    };
+  };
   elixir-nvim = {
     pname = "elixir-nvim";
     version = "2cb7c410346cb4f5b42b505b0e5cb036153973eb";

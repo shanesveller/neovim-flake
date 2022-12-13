@@ -1,4 +1,23 @@
 {
+    "LuaSnip-snippets-nvim": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "LuaSnip-snippets-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "molleweide",
+            "repo": "LuaSnip-snippets.nvim",
+            "rev": "d7e40e4cce622eab2316607dbcd8d6039bcb9fe0",
+            "sha256": "sha256-iFpk2dmcdF3krwem0Agl044ML2syw61wWPX7ldz4bhg=",
+            "type": "github"
+        },
+        "version": "d7e40e4cce622eab2316607dbcd8d6039bcb9fe0"
+    },
     "elixir-nvim": {
         "cargoLocks": null,
         "extract": null,
