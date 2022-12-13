@@ -1,12 +1,12 @@
 local luasnip = require("luasnip")
 
-local path = vim.fn.stdpath("config") .. "/snippets/"
-
 local load_all = function()
     -- import friendly-snippets
     require("luasnip.loaders.from_vscode").lazy_load({
         exclude = { "elixir", "eelixir" },
     })
+    -- import local snippets
+    require("luasnip.loaders.from_lua").lazy_load()
 end
 
 -- Keymaps {{{
@@ -44,3 +44,4 @@ end)
 load_all()
 
 -- vim: foldmethod=marker
+local path = vim.fn.stdpath("config") .. "/snippets/"
