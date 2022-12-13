@@ -20,6 +20,10 @@ vim.keymap.set("i", "<C-l>", function()
     end
 end)
 
+vim.keymap.set("n", "<leader>os", function()
+    require("luasnip.loaders").edit_snippet_files()
+end)
+
 -- Keymaps }}}
 
 -- import friendly-snippets
