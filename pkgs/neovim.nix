@@ -114,6 +114,7 @@
       diffview-nvim
       fugitive
       gitsigns-nvim
+      vim-rhubarb
       # Keybinds
       which-key-nvim
       # Knowledge/Documentations
