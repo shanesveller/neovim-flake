@@ -20,6 +20,11 @@ fetch-plugin mask=".":
   git commit -m 'chore(plugins): Update nvfetcher plugins' -m "$(cat plugin-changes.txt)"
   rm plugin-changes.txt
 
+find-plugin:
+    nix eval --impure --json \
+        --expr "__attrNames (builtins.getFlake (toString ./.)).inputs.nixpkgs.legacyPackages.x86_64-linux.vimPlugins" \
+        | jq -r '.[]' | fzf
+
 readme:
   nix -vL run ~/src/neovim-flake#neovimConfigured -- README.norg +"Neorg export to-file README.md"
 
