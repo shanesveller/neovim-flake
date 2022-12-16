@@ -4,7 +4,9 @@ local path = vim.fn.stdpath("config") .. "/snippets/"
 
 local load_all = function()
     -- import friendly-snippets
-    require("luasnip.loaders.from_vscode").lazy_load()
+    require("luasnip.loaders.from_vscode").lazy_load({
+        exclude = { "elixir", "eelixir" },
+    })
 end
 
 -- Keymaps {{{
