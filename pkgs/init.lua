@@ -308,7 +308,10 @@ o.smartindent = true
 o.softtabstop = 2
 o.tabstop = 2
 
-require("indent_blankline").setup({})
+require("indent_blankline").setup({
+    char = "┊",
+    show_trailing_blankline_indent = false,
+})
 
 -- Pairs
 require("mini.pairs").setup({})
