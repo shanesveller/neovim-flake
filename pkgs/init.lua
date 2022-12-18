@@ -426,6 +426,10 @@ wk.register({
             s = { "<cmd>Gitsigns stage_hunk<CR>", "Stage hunk" },
             S = { "<cmd>Gitsigns stage_buffer<CR>", "Stage file" },
         },
+        go = {
+            name = "Git Open",
+            o = { vim.cmd.GBrowse, "Browse at GitHub" },
+        },
         l = {
             name = "LSP",
             d = {
