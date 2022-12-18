@@ -64,6 +64,9 @@ g.maplocalleader = " "
 
 ---- Appearance {{{
 
+-- No search highlight
+o.hlsearch = false
+
 -- Line numbering
 o.number = true
 o.relativenumber = true
