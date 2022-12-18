@@ -13,12 +13,8 @@
     pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ {
-    self,
-    flake-parts,
-    ...
-  }:
-    flake-parts.lib.mkFlake {inherit self;} {
+  outputs = inputs @ {flake-parts, ...}:
+    flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
         ./parts/all-parts.nix
         inputs.pre-commit-hooks.flakeModule
