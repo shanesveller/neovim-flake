@@ -13,6 +13,13 @@
     pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  nixConfig = {
+    extra-substituters = ["https://shanesveller-neovim.cachix.org"];
+    extra-trusted-public-keys = [
+      "shanesveller-neovim.cachix.org-1:tH1AK21wTGgh33X4xBzoVSFuO84FtNKKlRdm9herQLc="
+    ];
+  };
+
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
