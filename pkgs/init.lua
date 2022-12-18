@@ -80,6 +80,18 @@ vim.cmd.colorscheme("base16-tomorrow-night")
 
 require("todo-comments").setup({})
 
+---- Highlight on Yank {{{
+
+api.nvim_create_autocmd("TextYankPost", {
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = api.nvim_create_augroup("YankHighlight", { clear = true }),
+    pattern = "*",
+})
+
+---- Highlight on Yank }}}
+
 ---- Statusline {{{
 
 local navic = require("nvim-navic")
