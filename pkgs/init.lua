@@ -425,6 +425,12 @@ wk.register({
             g = { "<cmd>Git<CR>", "Git Status" },
             s = { "<cmd>Gitsigns stage_hunk<CR>", "Stage hunk" },
             S = { "<cmd>Gitsigns stage_buffer<CR>", "Stage file" },
+            x = {
+                function()
+                    vim.api.nvim_feedkeys(":G absorb -b=", "n", true)
+                end,
+                "Git Absorb",
+            },
         },
         go = {
             name = "Git Open",
