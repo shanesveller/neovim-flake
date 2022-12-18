@@ -101,6 +101,7 @@
       indent-blankline-nvim
       nvim-colorizer-lua
       nvim-highlight-colors
+      nvim-treesitter-textobjects
       pretty-fold-nvim
       trouble-nvim
       # Finder
