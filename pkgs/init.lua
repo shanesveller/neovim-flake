@@ -814,6 +814,7 @@ lspconfig.sumneko_lua.setup({
             completion = {
                 callSnippet = "Replace",
             },
+            telemetry = { enable = false },
             workspace = {
                 checkThirdParty = false,
                 ignoreDir = { ".direnv", "result" },
