@@ -60,6 +60,8 @@ o.swapfile = false
 g.mapleader = " "
 g.maplocalleader = " "
 
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+
 ---- }}}
 
 ---- Appearance {{{
