@@ -1,5 +1,6 @@
 {
   lib,
+  self,
   neovim-unwrapped,
   neovimUtils,
   vimPlugins,
@@ -26,8 +27,8 @@
     withRuby = false;
 
     customRC = ''
-      set rtp^=${../rtp}
-      luafile ${./init.lua}
+      set rtp^=${self}/rtp
+      luafile ${self}/pkgs/init.lua
     '';
 
     plugins = with vimPlugins; let
