@@ -52,6 +52,51 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 ---- }}}
 
+---- Bootstrap lazy.nvim {{{
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+---- Bootstrap lazy.nvim }}}
+
+---- Load plugins via Lazy.nvim {{{
+require("lazy").setup("config.plugins", {
+    defaults = { lazy = true },
+    install = { colorscheme = { "base16-tomorrow-night", "tokyonight", "habamax" } },
+    checker = { enabled = false },
+    ui = { border = "rounded" },
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                "gzip",
+                "logiPat",
+                "matchit",
+                "matchparen",
+                "netrwPlugin",
+                "node_provider",
+                "perl_provider",
+                "python3_provider",
+                "rrhelper",
+                "ruby_provider",
+                "tarPlugin",
+                "tohtml",
+                "tutor",
+                "vimball",
+                "zipPlugin",
+            },
+        },
+    },
+})
+---- Load plugins via Lazy.nvim }}}
+
 ---- Appearance {{{
 
 -- No search highlight
@@ -231,7 +276,8 @@ local tel = require("telescope")
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
 
-tel.load_extension("fzf")
+-- TODO: lazy.nvim does not want to compile this no matter what I try
+-- tel.load_extension("fzf")
 tel.load_extension("project")
 
 tel.setup({
