@@ -14,6 +14,9 @@
   sumneko-lua-language-server,
   tailwind-intellisense,
   vscode-langservers-extracted,
+  # Build native extensions
+  gcc,
+  gnumake,
   # Flake-local
   grammars,
 }: let
@@ -90,6 +93,7 @@ in
           "PATH"
           ":"
           (lib.makeBinPath [
+            # LSP and linters
             alejandra
             nil
             statix
@@ -97,6 +101,9 @@ in
             sumneko-lua-language-server
             tailwind-intellisense
             vscode-langservers-extracted
+            # Compiling native extensions
+            gcc
+            gnumake
           ])
         ];
     })
