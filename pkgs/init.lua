@@ -394,6 +394,7 @@ wk.register({
                 "Detach",
             },
             i = { "<cmd>LspInfo<CR>", "Info" },
+            l = { "<cmd>Lazy<CR>", "Lazy.nvim" },
             L = { "<cmd>LspLog<CR>", "Log" },
             R = { "<cmd>LspRestart<CR>", "Restart" },
             s = { "<cmd>LspStart<CR>", "Start" },
