@@ -4,18 +4,6 @@ local api = vim.api
 local g = vim.g
 local o = vim.opt
 
----- Impatient {{{
-
-if vim.env.IMPATIENT_PROFILE ~= nil then
-    require("impatient").enable_profile()
-else
-    if vim.env.STARTUP_PROFILE == nil then
-        require("impatient")
-    end
-end
-
----- Impatient }}}
-
 ---- Disable builtins {{{
 
 g.loaded_gzip = 1
