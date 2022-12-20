@@ -76,7 +76,7 @@ o.relativenumber = true
 -- Use single statusbar per window
 o.laststatus = 3
 
-vim.cmd.colorscheme("base16-tomorrow-night")
+vim.cmd.colorscheme("base16-tomorrow-night-eighties")
 
 require("todo-comments").setup({})
 
