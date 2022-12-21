@@ -26,6 +26,8 @@
         ./parts/all-parts.nix
         inputs.pre-commit-hooks.flakeModule
       ];
+
+      debug = true;
       systems = ["aarch64-darwin" "x86_64-darwin" "x86_64-linux"];
     };
 }
