@@ -6,6 +6,9 @@ build:
 changelog:
   clog -i CHANGELOG.md -o CHANGELOG.md -F --setversion Unreleased
 
+clean:
+  rm -rf ~/.cache/nvim/ ~/.config/nvim/ ~/.local/share/nvim/* ~/.local/state/nvim/lazy/
+
 fetch-grammar mask=".":
   cd grammars && nvfetcher -vt -f '{{ mask }}' -c sources.toml -l ../grammar-changes.txt -o .
   alejandra --quiet grammars/generated.nix
