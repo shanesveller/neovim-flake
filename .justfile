@@ -16,18 +16,6 @@ fetch-grammar mask=".":
   git commit -m 'chore(tree-sitter): Update nvfetcher grammars' -m "$(cat grammar-changes.txt)"
   rm grammar-changes.txt
 
-fetch-plugin mask=".":
-  cd plugins && nvfetcher -vt -f '{{ mask }}' -c sources.toml -l ../plugin-changes.txt -o .
-  alejandra --quiet plugins/generated.nix
-  git add plugins/
-  git commit -m 'chore(plugins): Update nvfetcher plugins' -m "$(cat plugin-changes.txt)"
-  rm plugin-changes.txt
-
-find-plugin:
-    nix eval --impure --json \
-        --expr "__attrNames (builtins.getFlake (toString ./.)).inputs.nixpkgs.legacyPackages.x86_64-linux.vimPlugins" \
-        | jq -r '.[]' | fzf
-
 impure:
   mkdir -p ~/.config/nvim
   find ~/.config/nvim -type l -print -delete
