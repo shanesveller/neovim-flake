@@ -4,6 +4,8 @@ local api = vim.api
 local g = vim.g
 local o = vim.opt
 
+local configdir = vim.fs.normalize("~/src/neovim-flake")
+
 ---- Disable builtins {{{
 
 g.loaded_gzip = 1
@@ -70,6 +72,7 @@ vim.opt.rtp:prepend(lazypath)
 ---- Load plugins via Lazy.nvim {{{
 require("lazy").setup("config.plugins", {
     defaults = { lazy = true },
+    lockfile = configdir .. "/lazy-lock.json",
     install = { colorscheme = { "base16-tomorrow-night", "tokyonight", "habamax" } },
     checker = { enabled = false },
     ui = { border = "rounded" },
