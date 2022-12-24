@@ -42,6 +42,7 @@
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "b062311ea6da061756ebb591d30f61c9e5b44141" },
   "nvim-web-devicons": { "branch": "master", "commit": "05e1072f63f6c194ac6e867b567e6b437d3d4622" },
   "persistence.nvim": { "branch": "main", "commit": "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715" },
+  "playground": { "branch": "master", "commit": "8a887bcf66017bd775a0fb19c9d8b7a4d6759c48" },
   "plenary.nvim": { "branch": "master", "commit": "4b7e52044bbb84242158d977a50c4cbcd85070c7" },
   "rust-tools.nvim": { "branch": "master", "commit": "99fd1238c6068d0637df30b6cee9a264334015e9" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "fab3e2212e206f4f8b3bbaa656e129443c9b802e" },

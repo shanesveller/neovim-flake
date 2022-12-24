@@ -202,31 +202,6 @@ require("nvim-highlight-colors").setup({
 -- Comments
 require("Comment").setup({})
 
--- Folding {{{
-
--- -- Fold using tree-sitter grammar
--- o.foldexpr = "nvim_treesitter#foldexpr()"
--- o.foldlevelstart = 20
--- o.foldlevel = 20
--- o.foldmethod = "expr"
-
--- require("pretty-fold").setup({
--- 	global = {},
--- 	marker = { process_comment_signs = "spaces" },
--- 	expr = { process_comment_signs = false },
--- })
-
--- local group = api.nvim_create_augroup("OpenFolds", { clear = true })
--- api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
--- 	group = group,
--- 	pattern = "*",
--- 	callback = function()
--- 		vim.cmd.normal("zR")
--- 	end,
--- })
-
--- }}}
-
 -- Highlight word under cursor
 require("mini.cursorword").setup({})
 
@@ -547,33 +522,6 @@ local navic_attach = function(client, bufnr)
 end
 
 ---- Winbar Context }}}
-
----- }}}
-
----- Syntax highlighting {{{
-
-require("nvim-treesitter.configs").setup({
-    auto_install = false,
-    highlight = {
-        enable = true,
-        disable = {},
-        additional_vim_regex_highlighting = false,
-    },
-    indent = { enable = true },
-    incremental_selection = { enable = true },
-    textobjects = {
-        enable = true,
-        swap = {
-            enable = true,
-            swap_next = {
-                ["<leader>a"] = "@parameter.inner",
-            },
-            swap_previous = {
-                ["<leader>A"] = "@parameter.inner",
-            },
-        },
-    },
-})
 
 ---- }}}
 
