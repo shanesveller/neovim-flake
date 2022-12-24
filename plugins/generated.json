@@ -113,6 +113,25 @@
         },
         "version": "9afecea37c9b5ffed65a21de9e585d548de7778a"
     },
+    "persistence": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "persistence",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "persistence.nvim",
+            "rev": "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715",
+            "sha256": "sha256-9k/uQAZ3aCo+frVcfigR26ZiXooTh0Ial56b+0XfRmc=",
+            "type": "github"
+        },
+        "version": "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715"
+    },
     "pretty-fold-nvim": {
         "cargoLocks": null,
         "extract": null,

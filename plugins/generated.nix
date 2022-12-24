@@ -70,6 +70,17 @@
       sha256 = "sha256-df/L8ZOdjkviE6WRRe7uon82hlUb+yYDdtiN3pJ5OBs=";
     };
   };
+  persistence = {
+    pname = "persistence";
+    version = "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715";
+    src = fetchFromGitHub {
+      owner = "folke";
+      repo = "persistence.nvim";
+      rev = "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715";
+      fetchSubmodules = false;
+      sha256 = "sha256-9k/uQAZ3aCo+frVcfigR26ZiXooTh0Ial56b+0XfRmc=";
+    };
+  };
   pretty-fold-nvim = {
     pname = "pretty-fold-nvim";
     version = "a7d8b424abe0eedf50116c460fbe6dfd5783b1d5";

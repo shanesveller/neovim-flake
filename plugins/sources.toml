@@ -22,6 +22,10 @@ fetch.github = "nvim-neorg/neorg-telescope"
 src.git = "https://github.com/rgroli/other.nvim.git"
 fetch.github = "rgroli/other.nvim"
 
+[persistence]
+src.git = "https://github.com/folke/persistence.nvim.git"
+fetch.github = "folke/persistence.nvim"
+
 [pretty-fold-nvim]
 src.git = "https://github.com/anuvyklack/pretty-fold.nvim.git"
 fetch.github = "anuvyklack/pretty-fold.nvim"
