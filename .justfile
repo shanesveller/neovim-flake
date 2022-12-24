@@ -28,6 +28,13 @@ find-plugin:
         --expr "__attrNames (builtins.getFlake (toString ./.)).inputs.nixpkgs.legacyPackages.x86_64-linux.vimPlugins" \
         | jq -r '.[]' | fzf
 
+impure:
+  mkdir -p ~/.config/nvim
+  find ~/.config/nvim -type l -print -delete
+  ln -sf $PWD/pkgs/init.lua ~/.config/nvim/init.lua
+  ln -sf $PWD/rtp/lua ~/.config/nvim/lua
+  ln -sf $PWD/rtp/luasnippets ~/.config/nvim/luasnippets
+
 readme:
   nix -vL run ~/src/neovim-flake#neovimConfigured -- README.norg +"Neorg export to-file README.md"
 
