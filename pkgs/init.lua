@@ -118,9 +118,7 @@ require("lualine").setup({
         lualine_c = {
             { navic.get_location, cond = navic.is_available },
         },
-        lualine_z = {
-            { require("auto-session-library").current_session_name },
-        },
+        lualine_z = {},
     },
 })
 
@@ -557,8 +555,7 @@ api.nvim_create_autocmd("VimResized", {
 
 ---- Workflow {{{
 
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-require("auto-session").setup({})
+require("user.plugins.persistence")
 
 ---- Workflow }}}
 

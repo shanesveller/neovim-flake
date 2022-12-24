@@ -139,7 +139,7 @@
       mini-nvim
       neoconf
       # Workflow
-      auto-session
+      persistence
       vim-projectionist
       # Languages
       ## Elixir
