@@ -39,7 +39,6 @@ return {
     "nvim-neorg/neorg",
     "nvim-neorg/neorg-telescope",
     "onsails/lspkind.nvim",
-    "folke/neodev.nvim",
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",
     "smiteshp/nvim-navic",

@@ -639,35 +639,6 @@ lspconfig.jsonls.setup({
 })
 -- }}}
 
--- Lua {{{
-
-require("neodev").setup({
-    override = function(root_dir, library)
-        if require("neodev.util").has_file(root_dir, "~/src/neovim-flake") then
-            library.enabled = true
-            library.plugins = true
-        end
-    end,
-})
-lspconfig.sumneko_lua.setup({
-    capabilities = capabilities,
-    on_attach = navic_attach,
-    settings = {
-        Lua = {
-            completion = {
-                callSnippet = "Replace",
-            },
-            telemetry = { enable = false },
-            workspace = {
-                checkThirdParty = false,
-                ignoreDir = { ".direnv", "result" },
-            },
-        },
-    },
-})
-
--- }}}
-
 -- Nix {{{
 
 lspconfig.nil_ls.setup({
