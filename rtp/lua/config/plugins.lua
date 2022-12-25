@@ -44,10 +44,7 @@ return {
     "neovim/nvim-lspconfig",
     "smiteshp/nvim-navic",
     "b0o/SchemaStore.nvim",
-    "NoahTheDuke/vim-just",
     "echasnovski/mini.nvim",
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     "folke/persistence.nvim",
-    "saecki/crates.nvim",
-    "simrat39/rust-tools.nvim",
 }
