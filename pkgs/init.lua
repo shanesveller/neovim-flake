@@ -191,14 +191,6 @@ o.clipboard = "unnamedplus"
 -- Alignment
 require("mini.align").setup({})
 
--- Color
-require("colorizer").setup({})
-
-require("nvim-highlight-colors").setup({
-    render = "background",
-    enable_tailwind = true,
-})
-
 -- Comments
 require("Comment").setup({})
 
@@ -618,16 +610,6 @@ lspconfig.tailwindcss.setup({
         "html-eex",
     },
 })
--- }}}
-
--- Elixir {{{
-
-require("elixir").setup({
-    capabilities = capabilities,
-    cmd = { "elixir-ls" },
-    on_attach = navic_attach,
-})
-
 -- }}}
 
 -- HTML {{{
