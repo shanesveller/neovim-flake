@@ -1,9 +1,4 @@
 return {
-
-    -- Deps
-    "nvim-lua/plenary.nvim",
-
-    -- Imported
     "arkav/lualine-lsp-progress",
     "nvim-lualine/lualine.nvim",
     "RRethy/nvim-base16",
@@ -26,9 +21,6 @@ return {
     "direnv/direnv.vim",
     "lukas-reineke/indent-blankline.nvim",
     "folke/trouble.nvim",
-    "nvim-telescope/telescope.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim", install = "make" },
-    "nvim-telescope/telescope-project.nvim",
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "sindrets/diffview.nvim",
