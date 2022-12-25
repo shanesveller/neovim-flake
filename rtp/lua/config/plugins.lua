@@ -24,8 +24,6 @@ return {
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "folke/which-key.nvim",
-    "nvim-neorg/neorg",
-    "nvim-neorg/neorg-telescope",
     "onsails/lspkind.nvim",
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",

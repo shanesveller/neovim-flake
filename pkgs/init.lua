@@ -370,12 +370,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 ---- }}}
 
----- Knowledge/Documents {{{
-
-require("user.plugins.neorg")
-
----- }}}
-
 ---- LSP {{{
 
 local lspconfig = require("lspconfig")
