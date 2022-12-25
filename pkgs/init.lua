@@ -228,18 +228,6 @@ require("trouble").setup({})
 
 ---- }}}
 
----- File Tree {{{
-
-local nvim_tree_lazy = function()
-    require("nvim-web-devicons").setup({})
-    require("nvim-tree").setup({})
-    vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim tree" })
-    vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFindFile<CR>", { desc = "Open nvim tree to current file" })
-    vim.cmd("NvimTreeToggle")
-end
-
----- }}}
-
 ---- Keybinds {{{
 
 local wk = require("which-key")
@@ -259,7 +247,6 @@ wk.register({
             D = { "<cmd>%bd<CR>", "Delete All" },
             r = { "<cmd>edit!<CR>", "Revert" },
         },
-        e = { nvim_tree_lazy, "nvim-tree.lua" },
         f = {
             name = "Find/Files",
             ["."] = { "<cmd>Telescope find_files cwd=%:h<CR>", "Find files" },
