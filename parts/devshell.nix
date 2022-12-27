@@ -13,7 +13,7 @@
         statix
         stylua
       ];
-      local = with config.packages; [nvfetcher];
+      local = [];
       utilities = with pkgs; [just nix-tree];
     in
       pkgs.mkShell {
@@ -28,16 +28,6 @@
       postBuild = ''
         wrapProgram $out/bin/alejandra \
           --add-flags '--quiet'
-      '';
-    };
-
-    packages.nvfetcher = pkgs.symlinkJoin {
-      name = "nvfetcher";
-      paths = [pkgs.nvfetcher];
-      nativeBuildInputs = [pkgs.makeWrapper];
-      postBuild = ''
-        wrapProgram $out/bin/nvfetcher \
-          --set NIX_PATH nixpkgs=${inputs.nixpkgs}
       '';
     };
   };

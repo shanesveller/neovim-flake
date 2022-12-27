@@ -9,13 +9,6 @@ changelog:
 clean:
   rm -rf ~/.cache/nvim/ ~/.config/nvim/ ~/.local/share/nvim/* ~/.local/state/nvim/lazy/
 
-fetch-grammar mask=".":
-  cd grammars && nvfetcher -vt -f '{{ mask }}' -c sources.toml -l ../grammar-changes.txt -o .
-  alejandra --quiet grammars/generated.nix
-  git add grammars/
-  git commit -m 'chore(tree-sitter): Update nvfetcher grammars' -m "$(cat grammar-changes.txt)"
-  rm grammar-changes.txt
-
 impure:
   mkdir -p ~/.config/nvim
   find ~/.config/nvim -type l -print -delete

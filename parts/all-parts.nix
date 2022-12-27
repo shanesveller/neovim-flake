@@ -4,7 +4,6 @@ _: {
     # Order-insensitive
     ./checks.nix
     ./devshell.nix
-    ./grammars.nix
     ./neovim.nix
   ];
 }
