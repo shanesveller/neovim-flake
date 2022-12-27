@@ -26,7 +26,6 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",
     "smiteshp/nvim-navic",
-    "b0o/SchemaStore.nvim",
     "echasnovski/mini.nvim",
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     "folke/persistence.nvim",
