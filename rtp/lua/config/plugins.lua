@@ -21,7 +21,6 @@ return {
     "direnv/direnv.vim",
     "lukas-reineke/indent-blankline.nvim",
     "folke/trouble.nvim",
-    "folke/which-key.nvim",
     "onsails/lspkind.nvim",
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",
