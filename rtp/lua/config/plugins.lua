@@ -13,7 +13,7 @@ return {
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-path",
     "f3fora/cmp-spell",
-    "rafamadriz/friendly-snippets",
+    { "rafamadriz/friendly-snippets", enabled = false },
     "l3mon4d3/luasnip",
     "molleweide/LuaSnip-snippets.nvim",
     "hrsh7th/nvim-cmp",
