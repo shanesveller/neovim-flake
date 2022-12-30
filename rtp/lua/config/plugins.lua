@@ -1,6 +1,4 @@
 return {
-    "arkav/lualine-lsp-progress",
-    "nvim-lualine/lualine.nvim",
     "folke/todo-comments.nvim",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
@@ -23,7 +21,6 @@ return {
     "onsails/lspkind.nvim",
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",
-    "smiteshp/nvim-navic",
     "echasnovski/mini.nvim",
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     "folke/persistence.nvim",
