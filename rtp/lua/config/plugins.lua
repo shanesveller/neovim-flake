@@ -1,7 +1,6 @@
 return {
     "arkav/lualine-lsp-progress",
     "nvim-lualine/lualine.nvim",
-    "RRethy/nvim-base16",
     "folke/todo-comments.nvim",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
