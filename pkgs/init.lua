@@ -142,8 +142,6 @@ g.spell_lang = { "en_us" }
 
 require("user.plugins.cmp")
 
-require("user.plugins.luasnip")
-
 ---- }}}
 
 ---- Configuration {{{
