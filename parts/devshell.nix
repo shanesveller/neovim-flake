@@ -9,7 +9,6 @@
       lspServers = with pkgs; [nil sumneko-lua-language-server];
       linters = with inputs'.pre-commit-hooks.packages; [
         alejandra
-        nix-linter
         pre-commit
         statix
         stylua
