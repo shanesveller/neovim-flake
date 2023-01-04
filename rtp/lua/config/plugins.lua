@@ -20,5 +20,4 @@ return {
     "neovim/nvim-lspconfig",
     "echasnovski/mini.nvim",
     { "folke/neoconf.nvim", cmd = "Neoconf" },
-    "folke/persistence.nvim",
 }

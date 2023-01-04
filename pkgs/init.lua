@@ -297,12 +297,6 @@ api.nvim_create_autocmd("VimResized", {
 
 ---- }}}
 
----- Workflow {{{
-
-require("user.plugins.persistence")
-
----- Workflow }}}
-
 ---- Local {{{
 
 -- Time out disconnected, empty LSP clients
