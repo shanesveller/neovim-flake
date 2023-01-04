@@ -1,5 +1,4 @@
 return {
-    "folke/todo-comments.nvim",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
     "petertriho/cmp-git",
@@ -11,13 +10,10 @@ return {
     "hrsh7th/cmp-path",
     "f3fora/cmp-spell",
     "hrsh7th/nvim-cmp",
-    "numtostr/comment.nvim",
     "direnv/direnv.vim",
-    "lukas-reineke/indent-blankline.nvim",
     "folke/trouble.nvim",
     "onsails/lspkind.nvim",
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",
-    "echasnovski/mini.nvim",
     { "folke/neoconf.nvim", cmd = "Neoconf" },
 }

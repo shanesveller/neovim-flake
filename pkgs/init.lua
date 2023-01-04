@@ -112,8 +112,6 @@ o.relativenumber = true
 -- Use single statusbar per window
 o.laststatus = 3
 
-require("todo-comments").setup({})
-
 ---- Highlight on Yank {{{
 
 api.nvim_create_autocmd("TextYankPost", {
@@ -158,29 +156,12 @@ require("neoconf").setup({
 -- Access system clipboard
 o.clipboard = "unnamedplus"
 
--- Alignment
-require("mini.align").setup({})
-
--- Comments
-require("Comment").setup({})
-
--- Highlight word under cursor
-require("mini.cursorword").setup({})
-
 -- Indentation
 o.expandtab = true
 o.shiftwidth = 2
 o.smartindent = true
 o.softtabstop = 2
 o.tabstop = 2
-
-require("indent_blankline").setup({
-    char = "┊",
-    show_trailing_blankline_indent = false,
-})
-
--- Pairs
-require("mini.pairs").setup({})
 
 -- Scrolling
 o.scrolloff = 8
@@ -189,12 +170,6 @@ o.sidescrolloff = 8
 -- Search
 o.ignorecase = true
 o.smartcase = true
-
--- Surround
-require("mini.surround").setup({})
-
--- Trouble
-require("trouble").setup({})
 
 ---- }}}
 

@@ -105,11 +105,6 @@ wk.register({
         },
         x = {
             name = "Trouble",
-            d = { "<cmd>TroubleToggle document_diagnostics<CR>", "Trouble.nvim Document Diag" },
-            l = { "<cmd>TroubleToggle loclist<CR>", "Trouble.nvim Loclist" },
-            q = { "<cmd>TroubleToggle quickfix<CR>", "Trouble.nvim Quickfix" },
-            w = { "<cmd>TroubleToggle workspace_diagnostics<CR>", "Trouble.nvim Workspace Diag" },
-            x = { "<cmd>TroubleToggle<CR>", "Toggle Trouble.nvim" },
         },
     },
 })
