@@ -10,10 +10,8 @@ return {
     "hrsh7th/cmp-path",
     "f3fora/cmp-spell",
     "hrsh7th/nvim-cmp",
-    "direnv/direnv.vim",
     "folke/trouble.nvim",
     "onsails/lspkind.nvim",
     "jose-elias-alvarez/null-ls.nvim",
     "neovim/nvim-lspconfig",
-    { "folke/neoconf.nvim", cmd = "Neoconf" },
 }

@@ -142,15 +142,6 @@ require("user.plugins.cmp")
 
 ---- }}}
 
----- Configuration {{{
-require("neoconf").setup({
-    import = {
-        vscode = false,
-        coc = false,
-    },
-})
----- Configuration }}}
-
 ---- Editing {{{
 
 -- Access system clipboard
