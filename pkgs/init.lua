@@ -31,7 +31,7 @@ vim.opt.rtp:prepend(lazypath)
 
 ---- Load plugins via Lazy.nvim {{{
 require("lazy").setup("config.plugins", {
-    defaults = { lazy = true },
+    defaults = { lazy = true, version = "*" },
     lockfile = configdir .. "/lazy-lock.json",
     install = { colorscheme = { "base16-tomorrow-night", "tokyonight", "habamax" } },
     checker = { enabled = false },
