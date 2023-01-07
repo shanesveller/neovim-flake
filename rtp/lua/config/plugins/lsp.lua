@@ -1,23 +1,3 @@
--- Time out disconnected, empty LSP clients
-vim.api.nvim_create_autocmd("BufDelete", {
-    group = vim.api.nvim_create_augroup("LspTimeout", { clear = true }),
-    pattern = "*",
-    callback = function()
-        local delete_empty_lsp_clients = function()
-            local clients = vim.lsp.get_active_clients()
-            for _, client in ipairs(clients) do
-                local bufs = vim.lsp.get_buffers_by_client_id(client.id)
-                if #bufs == 0 then
-                    print("stopping LSP client " .. client.name)
-                    client:stop()
-                end
-            end
-        end
-
-        vim.defer_fn(delete_empty_lsp_clients, 5000)
-    end,
-})
-
 return {
     {
         "jose-elias-alvarez/null-ls.nvim",

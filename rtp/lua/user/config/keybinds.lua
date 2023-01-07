@@ -108,12 +108,3 @@ wk.register({
         },
     },
 })
-
--- Use 'q' to quit from common plugins
-vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = { "fugitive", "help", "man", "qf" },
-    callback = function()
-        vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = true, silent = true })
-        vim.bo.buflisted = false
-    end,
-})

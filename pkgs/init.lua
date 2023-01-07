@@ -1,14 +1,11 @@
 -- vim: foldmethod=marker
 
-local api = vim.api
-local g = vim.g
-
 local configdir = vim.fs.normalize("~/src/neovim-flake")
 
 ---- Early-stage keybinds {{{
 
-g.mapleader = " "
-g.maplocalleader = " "
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
@@ -60,38 +57,12 @@ require("lazy").setup("config.plugins", {
 })
 ---- Load plugins via Lazy.nvim }}}
 
----- Appearance {{{
-
----- Highlight on Yank {{{
-
-api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-    group = api.nvim_create_augroup("YankHighlight", { clear = true }),
-    pattern = "*",
-})
-
----- Highlight on Yank }}}
-
----- Appearance }}}
-
----- Windows and Tabs {{{
-
--- Rebalance windows whenever Tmux/terminal resizes
-api.nvim_create_autocmd("VimResized", {
-    group = api.nvim_create_augroup("Window Rebalance", { clear = true }),
-    pattern = "*",
-    command = "wincmd =",
-})
-
----- Windows and Tabs }}}
-
 ---- Deferred Loads {{{
 vim.api.nvim_create_autocmd("User", {
     pattern = "VeryLazy",
     once = true,
     callback = function()
+        require("user.config.autocmds")
         require("user.config.keybinds")
     end,
 })
