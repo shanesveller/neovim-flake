@@ -46,6 +46,7 @@ return {
             end)
 
             vim.keymap.set("n", "<leader>os", function()
+                ---@diagnostic disable-next-line: missing-parameter
                 require("luasnip.loaders").edit_snippet_files()
             end)
 
