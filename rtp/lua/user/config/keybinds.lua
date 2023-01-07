@@ -11,8 +11,6 @@ wk.register({
             name = "Buffers",
             b = { "<cmd>buffers<CR>", "List" },
             B = { "<cmd>Telescope buffers<CR>", "List" },
-            d = { "<cmd>bd<CR>", "Delete" },
-            D = { "<cmd>%bd<CR>", "Delete All" },
             r = { "<cmd>edit!<CR>", "Revert" },
         },
         f = {

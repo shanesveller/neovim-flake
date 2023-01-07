@@ -24,6 +24,7 @@
   "lualine.nvim": { "branch": "master", "commit": "d8c392dd75778d6258da4e7c55522e94ac389732" },
   "luasnip": { "branch": "master", "commit": "563827f00bb4fe43269e3be653deabc0005f1302" },
   "mini.align": { "branch": "main", "commit": "f35e3e8a0372b4cd76d8b28d511068cda95a49ec" },
+  "mini.bufremove": { "branch": "main", "commit": "96c2a7f3e7d079639a0e23d2fc0d4585e5d02dfd" },
   "mini.cursorword": { "branch": "main", "commit": "66aa85d4bad98a8eba7e3db9d52964f5185e65af" },
   "mini.pairs": { "branch": "main", "commit": "fec9aba50912d8c3d92d07d6a77952de84f8d7ad" },
   "mini.surround": { "branch": "main", "commit": "df41f1c009afbb3eef39d979977fb14404576f9b" },
