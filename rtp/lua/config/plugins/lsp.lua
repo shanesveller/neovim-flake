@@ -47,6 +47,9 @@ return {
         config = function()
             require("user.plugins.lsp")
         end,
+        dependencies = {
+            "folke/neodev.nvim",
+        },
         ft = { "elixir", "lua", "rust" },
     },
 }

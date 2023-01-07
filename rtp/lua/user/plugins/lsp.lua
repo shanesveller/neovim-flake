@@ -103,6 +103,24 @@ lspconfig.jsonls.setup({
 })
 -- }}}
 
+-- Lua {{{
+lspconfig.sumneko_lua.setup({
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            completion = {
+                callSnippet = "Replace",
+            },
+            telemetry = { enable = false },
+            workspace = {
+                checkThirdParty = false,
+                ignoreDir = { ".direnv", "result" },
+            },
+        },
+    },
+})
+-- Lua }}}
+
 -- Nix {{{
 
 lspconfig.nil_ls.setup({
