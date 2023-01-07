@@ -28,24 +28,24 @@
   };
   neoconf = {
     pname = "neoconf";
-    version = "c808afff84ed3578c4598b9301e0d600a6044e40";
+    version = "3e3294631ef23599b9fccb87dee2592c73d11c60";
     src = fetchFromGitHub {
       owner = "folke";
       repo = "neoconf.nvim";
-      rev = "c808afff84ed3578c4598b9301e0d600a6044e40";
+      rev = "3e3294631ef23599b9fccb87dee2592c73d11c60";
       fetchSubmodules = false;
-      sha256 = "sha256-ZAIYKwQmgzgOo3YvD46m/NHZOl1Vdmi4mE+USi/rfaA=";
+      sha256 = "sha256-T5a/fL90fWXY81pDROqcu+5MP2aorKTnUuTJw6GDEbA=";
     };
   };
   neorg = {
     pname = "neorg";
-    version = "a79bf5969e27a3f1f1478c9b05c187815f2b2390";
+    version = "4ad79529477fd8b84fec75485e705eab2d3ca34a";
     src = fetchFromGitHub {
       owner = "nvim-neorg";
       repo = "neorg";
-      rev = "a79bf5969e27a3f1f1478c9b05c187815f2b2390";
+      rev = "4ad79529477fd8b84fec75485e705eab2d3ca34a";
       fetchSubmodules = false;
-      sha256 = "sha256-MDXf5LYTYEKZHrhWCJBp+0BGEZG1Qz35/0SCoosTHKk=";
+      sha256 = "sha256-+xciOJFvOm0pGSLKeRMhV40ZnkzZAbtQYNSzC/H3Txw=";
     };
   };
   neorg-telescope = {
@@ -72,13 +72,13 @@
   };
   persistence = {
     pname = "persistence";
-    version = "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715";
+    version = "8484fdaa284207f77ec69b9627316bf334ad653f";
     src = fetchFromGitHub {
       owner = "folke";
       repo = "persistence.nvim";
-      rev = "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715";
+      rev = "8484fdaa284207f77ec69b9627316bf334ad653f";
       fetchSubmodules = false;
-      sha256 = "sha256-9k/uQAZ3aCo+frVcfigR26ZiXooTh0Ial56b+0XfRmc=";
+      sha256 = "sha256-DnUgzaOroGKIREuHTHnf3/+iwRCsKsrCHDRRbfnyYog=";
     };
   };
   pretty-fold-nvim = {

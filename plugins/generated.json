@@ -50,11 +50,11 @@
             "name": null,
             "owner": "folke",
             "repo": "neoconf.nvim",
-            "rev": "c808afff84ed3578c4598b9301e0d600a6044e40",
-            "sha256": "sha256-ZAIYKwQmgzgOo3YvD46m/NHZOl1Vdmi4mE+USi/rfaA=",
+            "rev": "3e3294631ef23599b9fccb87dee2592c73d11c60",
+            "sha256": "sha256-T5a/fL90fWXY81pDROqcu+5MP2aorKTnUuTJw6GDEbA=",
             "type": "github"
         },
-        "version": "c808afff84ed3578c4598b9301e0d600a6044e40"
+        "version": "3e3294631ef23599b9fccb87dee2592c73d11c60"
     },
     "neorg": {
         "cargoLocks": null,
@@ -69,11 +69,11 @@
             "name": null,
             "owner": "nvim-neorg",
             "repo": "neorg",
-            "rev": "a79bf5969e27a3f1f1478c9b05c187815f2b2390",
-            "sha256": "sha256-MDXf5LYTYEKZHrhWCJBp+0BGEZG1Qz35/0SCoosTHKk=",
+            "rev": "4ad79529477fd8b84fec75485e705eab2d3ca34a",
+            "sha256": "sha256-+xciOJFvOm0pGSLKeRMhV40ZnkzZAbtQYNSzC/H3Txw=",
             "type": "github"
         },
-        "version": "a79bf5969e27a3f1f1478c9b05c187815f2b2390"
+        "version": "4ad79529477fd8b84fec75485e705eab2d3ca34a"
     },
     "neorg-telescope": {
         "cargoLocks": null,
@@ -126,11 +126,11 @@
             "name": null,
             "owner": "folke",
             "repo": "persistence.nvim",
-            "rev": "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715",
-            "sha256": "sha256-9k/uQAZ3aCo+frVcfigR26ZiXooTh0Ial56b+0XfRmc=",
+            "rev": "8484fdaa284207f77ec69b9627316bf334ad653f",
+            "sha256": "sha256-DnUgzaOroGKIREuHTHnf3/+iwRCsKsrCHDRRbfnyYog=",
             "type": "github"
         },
-        "version": "5da6ddd077a63c4ba3b6d7c7ba53b7c7e6530715"
+        "version": "8484fdaa284207f77ec69b9627316bf334ad653f"
     },
     "pretty-fold-nvim": {
         "cargoLocks": null,
