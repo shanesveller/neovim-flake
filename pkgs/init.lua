@@ -2,7 +2,6 @@
 
 local api = vim.api
 local g = vim.g
-local o = vim.opt
 
 local configdir = vim.fs.normalize("~/src/neovim-flake")
 
@@ -63,16 +62,6 @@ require("lazy").setup("config.plugins", {
 
 ---- Appearance {{{
 
--- No search highlight
-o.hlsearch = false
-
--- Line numbering
-o.number = true
-o.relativenumber = true
-
--- Use single statusbar per window
-o.laststatus = 3
-
 ---- Highlight on Yank {{{
 
 api.nvim_create_autocmd("TextYankPost", {
@@ -85,44 +74,15 @@ api.nvim_create_autocmd("TextYankPost", {
 
 ---- Highlight on Yank }}}
 
----- }}}
+---- Appearance }}}
 
 ---- Completion {{{
-
-g.completeopt = "menu,menuone,noinsert"
-g.spell = true
-g.spell_lang = { "en_us" }
 
 require("user.plugins.cmp")
 
 ---- }}}
 
----- Editing {{{
-
--- Access system clipboard
-o.clipboard = "unnamedplus"
-
--- Indentation
-o.expandtab = true
-o.shiftwidth = 2
-o.smartindent = true
-o.softtabstop = 2
-o.tabstop = 2
-
--- Scrolling
-o.scrolloff = 8
-o.sidescrolloff = 8
-
--- Search
-o.ignorecase = true
-o.smartcase = true
-
----- }}}
-
 ---- Windows and Tabs {{{
-
-o.splitbelow = true
-o.splitright = true
 
 -- Rebalance windows whenever Tmux/terminal resizes
 api.nvim_create_autocmd("VimResized", {
@@ -131,7 +91,7 @@ api.nvim_create_autocmd("VimResized", {
     command = "wincmd =",
 })
 
----- }}}
+---- Windows and Tabs }}}
 
 ---- Deferred Loads {{{
 vim.api.nvim_create_autocmd("User", {
