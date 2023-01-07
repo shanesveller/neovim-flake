@@ -6,8 +6,6 @@ return {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
                 cmd = { "elixir-ls" },
                 on_attach = function(client, bufnr)
-                    require("nvim-navic").attach(client, bufnr)
-
                     vim.keymap.set("n", "<localleader>mdg", "<cmd>Mix deps.get<CR>", { buffer = true })
                     vim.keymap.set("n", "<localleader>mp", "<cmd>ElixirToPipe<CR>", { buffer = true })
                     vim.keymap.set("n", "<localleader>mP", "<cmd>ElixirFromPipe<CR>", { buffer = true })

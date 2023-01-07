@@ -85,12 +85,6 @@ api.nvim_create_autocmd("TextYankPost", {
 
 ---- Highlight on Yank }}}
 
----- Statusline {{{
-
-local navic = require("nvim-navic")
-
----- Statusline }}}
-
 ---- }}}
 
 ---- Completion {{{
@@ -122,20 +116,6 @@ o.sidescrolloff = 8
 -- Search
 o.ignorecase = true
 o.smartcase = true
-
----- }}}
-
----- LSP {{{
-
----- Winbar Context {{{
-
-navic.setup({})
-
-local navic_attach = function(client, bufnr)
-    navic.attach(client, bufnr)
-end
-
----- Winbar Context }}}
 
 ---- }}}
 

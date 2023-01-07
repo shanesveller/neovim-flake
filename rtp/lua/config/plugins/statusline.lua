@@ -36,4 +36,16 @@ return {
             })
         end,
     },
+    {
+        "smiteshp/nvim-navic",
+        -- Credit: https://github.com/folke/LazyVim/blob/ce322b70420f1b0ec94bfab0d2fb6d104875b5e6/lua/lazyvim/plugins/ui.lua#L344-L348
+        init = function()
+            require("user.util").on_attach(function(client, buffer)
+                if client.server_capabilities.documentSymbolProvider then
+                    require("nvim-navic").attach(client, buffer)
+                end
+            end)
+        end,
+        config = true,
+    },
 }

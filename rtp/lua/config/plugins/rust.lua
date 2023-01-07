@@ -21,9 +21,6 @@ return {
             rt.setup({
                 server = {
                     capabilities = require("cmp_nvim_lsp").default_capabilities(),
-                    on_attach = function(client, bufnr)
-                        require("nvim-navic").attach(client, bufnr)
-                    end,
                 },
             })
         end,

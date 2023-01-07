@@ -14,9 +14,6 @@ return {
 
             require("lspconfig").sumneko_lua.setup({
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
-                on_attach = function(client, bufnr)
-                    require("nvim-navic").attach(client, bufnr)
-                end,
                 settings = {
                     Lua = {
                         completion = {
