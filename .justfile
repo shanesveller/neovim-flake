@@ -12,7 +12,7 @@ clean:
 impure:
   mkdir -p ~/.config/nvim
   find ~/.config/nvim -type l -print -delete
-  ln -sf $PWD/pkgs/init.lua ~/.config/nvim/init.lua
+  ln -sf $PWD/rtp/init.lua ~/.config/nvim/init.lua
   ln -sf $PWD/rtp/lua ~/.config/nvim/lua
   ln -sf $PWD/rtp/luasnippets ~/.config/nvim/luasnippets
 
