@@ -19,7 +19,6 @@ vim.api.nvim_create_autocmd("BufDelete", {
 })
 
 return {
-    "onsails/lspkind.nvim",
     {
         "jose-elias-alvarez/null-ls.nvim",
         event = "BufReadPre",

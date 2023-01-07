@@ -76,12 +76,6 @@ api.nvim_create_autocmd("TextYankPost", {
 
 ---- Appearance }}}
 
----- Completion {{{
-
-require("user.plugins.cmp")
-
----- }}}
-
 ---- Windows and Tabs {{{
 
 -- Rebalance windows whenever Tmux/terminal resizes
