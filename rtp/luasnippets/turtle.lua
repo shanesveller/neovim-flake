@@ -1,3 +1,5 @@
+---@diagnostic disable:undefined-global
+
 local fname = function(args)
     local name = args[1][1]
     local split = vim.split(name, " ", { trimempty = true })
